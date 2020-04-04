@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>各板块透明度设置（无坑版）</title>
+      <link href="/undefined.html"/>
+      <url>/undefined.html</url>
+      
+        <content type="html"><![CDATA[<p>在网上找了各种修改透明度的教程，一路踩坑终于调整成功！特此总结防止入坑。</p><a id="more"></a><p>效果预览：<a href="https://zeroflycui.github.io" target="_blank" rel="noopener">https://zeroflycui.github.io</a></p><h1 id="文章主题以及评论区透明度设置"><a href="#文章主题以及评论区透明度设置" class="headerlink" title="文章主题以及评论区透明度设置"></a>文章主题以及评论区透明度设置</h1><p>首先找到此路径  \blog\themes\next\source\css_schemes\Gemini 下的index.styl 文件。</p><img src="/undefined/路径1.jpg" style="zoom:50%;"><p>打开index.styl文件，把 .post-block 下的background后的改为rgba(255,255,255,0.6), 最后的数值是透明度设置，自己调整。</p><img src="/undefined/设置1.jpg" style="zoom:50%;"><p>效果：</p><img src="/undefined/背景透明度2.jpg" style="zoom:50%;"><h1 id="侧边栏透明度设置"><a href="#侧边栏透明度设置" class="headerlink" title="侧边栏透明度设置"></a>侧边栏透明度设置</h1><p>打开以下路径 \blog\themes\next\source\css_schemes\Pisces 下的_sidebar.styl,修改 .sidebar以及.sidebar-inner 下的background：rgba(255,255,255,0.6).如下图所示：</p><img src="/undefined/设置2.jpg" style="zoom:50%;"><p>效果图：</p><img src="/undefined/设置3.jpg" style="zoom:50%;"><hr><p>修改完成，如果有错请通知。谢谢阅读！！</p><p>参考博文链接：</p><p><a href="http://www.aomanhao.top/2019/01/20/theme_NextConfig1/" target="_blank" rel="noopener">http://www.aomanhao.top/2019/01/20/theme_NextConfig1/</a></p><p><a href="https://blog.csdn.net/qq_43414603/article/details/104113198" target="_blank" rel="noopener">https://blog.csdn.net/qq_43414603/article/details/104113198</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> HEXO </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> next </tag>
+            
+            <tag> 透明度 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo搭建</title>
       <link href="/57ee7c1d.html"/>
       <url>/57ee7c1d.html</url>
@@ -23,19 +52,6 @@
             <tag> HEXO </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/4a17b156.html"/>
-      <url>/4a17b156.html</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
