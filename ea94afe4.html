@@ -21,28 +21,28 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#7400a1","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="在B站上观看北京理工大学的爬虫慕课，在爬取淘宝商品价格和名称时出现了只出表头信息的结果。">
+  <meta name="description" content="旋转数组（非递减）求最小值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="爬取淘宝商品名称和价格">
-<meta property="og:url" content="http://yoursite.com/a4e5e07c.html">
+<meta property="og:title" content="求旋转数组最小值(C++版)">
+<meta property="og:url" content="http://yoursite.com/ea94afe4.html">
 <meta property="og:site_name" content="zerofly&#39;s Blog">
-<meta property="og:description" content="在B站上观看北京理工大学的爬虫慕课，在爬取淘宝商品价格和名称时出现了只出表头信息的结果。">
+<meta property="og:description" content="旋转数组（非递减）求最小值">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/a4e5e07c/p1.png">
-<meta property="og:image" content="http://yoursite.com/a4e5e07c/p2.jpg">
-<meta property="og:image" content="http://yoursite.com/a4e5e07c/p3.jpg">
-<meta property="og:image" content="http://yoursite.com/a4e5e07c/p4.jpg">
-<meta property="og:image" content="http://yoursite.com/a4e5e07c/p5.jpg">
-<meta property="og:image" content="http://yoursite.com/a4e5e07c/p6.jpg">
-<meta property="article:published_time" content="2020-04-05T13:10:57.000Z">
-<meta property="article:modified_time" content="2020-04-05T14:02:45.385Z">
+<meta property="og:image" content="http://yoursite.com/ea94afe4/image-20200519153003545.png">
+<meta property="og:image" content="http://yoursite.com/ea94afe4/image-20200519153222647.png">
+<meta property="og:image" content="http://yoursite.com/ea94afe4/image-20200519153525515.png">
+<meta property="og:image" content="http://yoursite.com/ea94afe4/image-20200519153649161.png">
+<meta property="og:image" content="http://yoursite.com/ea94afe4/image-20200519161121365.png">
+<meta property="article:published_time" content="2020-05-19T02:29:34.000Z">
+<meta property="article:modified_time" content="2020-05-19T08:37:59.669Z">
 <meta property="article:author" content="zerofly">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="爬虫">
+<meta property="article:tag" content="数组">
+<meta property="article:tag" content="剑指Offer">
+<meta property="article:tag" content="查找">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/a4e5e07c/p1.png">
+<meta name="twitter:image" content="http://yoursite.com/ea94afe4/image-20200519153003545.png">
 
-<link rel="canonical" href="http://yoursite.com/a4e5e07c.html">
+<link rel="canonical" href="http://yoursite.com/ea94afe4.html">
 
 
 <script id="page-configurations">
@@ -55,7 +55,7 @@
   };
 </script>
 
-  <title>爬取淘宝商品名称和价格 | zerofly's Blog</title>
+  <title>求旋转数组最小值(C++版) | zerofly's Blog</title>
   
 
 
@@ -201,7 +201,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/a4e5e07c.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/ea94afe4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -214,7 +214,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          爬取淘宝商品名称和价格
+          求旋转数组最小值(C++版)
         </h1>
     
         <div class="post-meta">
@@ -225,7 +225,7 @@
               <span class="post-meta-item-text">发表于</span>
               
     
-              <time title="创建时间：2020-04-05 21:10:57 / 修改时间：22:02:45" itemprop="dateCreated datePublished" datetime="2020-04-05T21:10:57+08:00">2020-04-05</time>
+              <time title="创建时间：2020-05-19 10:29:34 / 修改时间：16:37:59" itemprop="dateCreated datePublished" datetime="2020-05-19T10:29:34+08:00">2020-05-19</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -233,7 +233,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                  <a href="/categories/%E5%89%91%E6%8C%87Offer/" itemprop="url" rel="index"><span itemprop="name">剑指Offer</span></a>
                 </span>
             </span>
     
@@ -255,8 +255,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/a4e5e07c.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/a4e5e07c.html" itemprop="commentCount"></span>
+    <a title="valine" href="/ea94afe4.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/ea94afe4.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -266,7 +266,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.3k</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -275,6 +275,7 @@
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               <span>2 分钟</span>
             </span>
+            <div class="post-description">旋转数组（非递减）求最小值</div>
     
         </div>
       </header>
@@ -285,39 +286,53 @@
     <div class="post-body" itemprop="articleBody">
     
       
-        <hr>
-<p>在B站上观看北京理工大学的爬虫慕课，在爬取淘宝商品价格和名称时出现了只出表头信息的结果。</p>
-<a id="more"></a>
-
-<p><img src="/a4e5e07c/p1.png" alt></p>
-<p>经过在视频下方评论区的方法发现依然有错，最后发现是自己的拼写错误:joy:</p>
-<p>发话不多说直接上教程：（<strong>我使用的是chrome浏览器</strong>）</p>
-<p>在淘宝页面右键，点击检查：</p>
-<img src="/a4e5e07c/p2.jpg" style="zoom:50%;">
-
-<p>然后在源代码区进行以下步骤：</p>
+        <h1 id="刷题平台"><a href="#刷题平台" class="headerlink" title="刷题平台"></a>刷题平台</h1><p><a href="https://www.nowcoder.com" target="_blank" rel="noopener">牛客网</a></p>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个<strong>非递减</strong>排序的数组的一个旋转，输出旋转数组的最小元素。例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，改数组的最小值为1.<strong>注意</strong>：给出的所有元素都大于0，若数组大小为0，请返回0.</p>
+<h1 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h1><p><strong>非递减</strong>：说明输入的数组不是递增的就是含有多个相等的元素构成。</p>
+<p><strong>递增排序情况</strong>：</p>
+<p>由于输入的是一个旋转数组，意味着<strong>原始数组前较小的元素移动到数组末尾</strong>，因此可以确定旋转后的数组<strong>第一个元素一定是大于最后一个元素的</strong>。如果不满足这个条件，则说明不是旋转数组。（<strong>这可以作为判断数组是否旋转的条件</strong>）</p>
+<p>查找数组中的最小元素：这个可以根据数据结构中的查找选择合适的方法。由于数组是递增排序的，因此数组可以看成在有序表中进行查找。</p>
+<p>有序表中查找的方法：二分查找，插值查找，斐波那契查找。三种方法的时间复杂度都是<code>O[logn]</code></p>
+<blockquote>
+<p>二分法：</p>
+<p><strong>优点</strong>：对于静态的查找表进行查找，这种算法比较好</p>
+<p><strong>缺点</strong>：对于频繁插入删除的顺序表来说，这种算法就不建议使用</p>
+</blockquote>
+<blockquote>
+<p>插值查找：</p>
+<p><strong>优点</strong>：对于顺序表较长，且表中的元素大小分布均匀（元素值之间相差较小），较二分法要好。</p>
+<p><strong>缺点</strong>：当数组中的元素大小分布不均匀时（例如{1，2，9999，99999}），这种算法效率就比较差。</p>
+</blockquote>
+<blockquote>
+<p>斐波那契查找：</p>
+<p><strong>优点</strong>：这种算法在查找过程中仅仅进行最简单的加减法运算，在大量数据下查找，会占有优势。</p>
+<p><strong>缺点</strong>：虽然这种算法的平均查找性能优于二分法，但是如果查找的关键字位于较长的半区，则查找效率要低于二分法。</p>
+</blockquote>
+<p>通过分析得知：旋转数组是一个<strong>静态数组</strong>，但是数组中的<strong>元素大小分布不确定</strong>，<strong>最小元素的位置也不确定</strong>，因此选择二分查找法是不错的选择。</p>
 <ul>
-<li><p>1、点击<code>Network</code></p>
+<li><p>旋转数组可以看成两个递增序列。</p>
 </li>
-<li><p>2、刷新页面，点击<code>Name</code>中的第一个<code>search?</code></p>
+<li><p>取两个指针分别指向第一个元素和最后一个元素。<img src="/ea94afe4/image-20200519153003545.png" alt="image-20200519153003545" style="zoom:50%;"></p>
 </li>
-<li><p>3、在<code>Headers</code>中复制<code>cookie和user-agent</code>内容</p>
-<p> <img src="/a4e5e07c/p3.jpg" alt></p>
+<li><blockquote>
+<p>在数组中取中间元素作为比较对象，若中间值大于第一个元素，则说明中间值在前面一个递增序列中，将第一个指针指向中间元素；<img src="/ea94afe4/image-20200519153222647.png" alt="image-20200519153222647" style="zoom:50%;"></p>
+<p>若中间值小于最后一个元素，则说明中间值在后面一个递增序列中，则将第二个指针指向中间元素。</p>
+<img src="/ea94afe4/image-20200519153525515.png" alt="image-20200519153525515" style="zoom:50%;">
+
+<p>循环以上步骤。</p>
+<p>当两个指针指向相邻元素时，右指针指向的元素就是最小值。</p>
+<img src="/ea94afe4/image-20200519153649161.png" alt="image-20200519153649161" style="zoom:50%;">
+</blockquote>
 </li>
 </ul>
-<p><strong>把复制的内容放到如下位置：</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getHTML</span><span class="params">(url)</span>:</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        print(<span class="string">'解析开始'</span>)</span><br><span class="line">        headers = &#123;</span><br><span class="line">        <span class="string">'user-agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'</span>,</span><br><span class="line">        <span class="string">'cookie'</span>: <span class="string">'miid=1204848422178730713; thw=cn; cna=/FjUFFH98VYCAbfHca7IzgoX; tracknick=%5Cu51B0%5Cu6CB3%5Cu4E16%5Cu7EAA%5Cu98DE; tg=0; hng=CN%7Czh-CN%7CCNY%7C156; enc=S9dNZWnBqTugKoqk7f9MpczA8QNKFdbWP8Dab4FEeTI43rFE%2B%2FrwSE7PnLJF%2BRA5yy70RD7m9rnCJyj72bByLg%3D%3D; t=23bd277878acd720dad699e1cc1f655d; cookie2=1266fc62e2cc3c4136c7085328db7985; v=0; _tb_token_=3fe6ee4e766b8; alitrackid=www.taobao.com; lastalitrackid=www.taobao.com; _samesite_flag_=true; sgcookie=EvIOOHQLzH3Oo804wQlio; unb=2278212962; uc3=lg2=VFC%2FuZ9ayeYq2g%3D%3D&amp;nk2=0ryj1fYS8gv0fQ%3D%3D&amp;vt3=F8dBxdAUzLP9Oq23c0M%3D&amp;id2=UUpmlOw4s1nHfg%3D%3D; csg=f123a494; lgc=%5Cu51B0%5Cu6CB3%5Cu4E16%5Cu7EAA%5Cu98DE; cookie17=UUpmlOw4s1nHfg%3D%3D; dnk=%5Cu51B0%5Cu6CB3%5Cu4E16%5Cu7EAA%5Cu98DE; skt=a5e20976396f587e; existShop=MTU4NjA4MzcyMA%3D%3D; uc4=id4=0%40U2gsGA%2BPaSbBR0Lnefhgm24jPZLA&amp;nk4=0%400A28Ox7kSTkcIvypO6o%2FqsLX5wQe; _cc_=VT5L2FSpdA%3D%3D; _l_g_=Ug%3D%3D; sg=%E9%A3%9E2f; _nk_=%5Cu51B0%5Cu6CB3%5Cu4E16%5Cu7EAA%5Cu98DE; cookie1=VAn7B4bWBvYsc6mrUjgaw%2F%2F8dWi4qfHRI6oPI3CZaYI%3D; tfstk=c47CBgD9vvDCt6DJ59NwYM0dAv8RZXe6sk9dOGUC18n-cLCCix02nXEhqA09DC1..; mt=ci=3_1; JSESSIONID=E9C7BE989C9A4781DC9BDF55EE086724; l=dBLuPSIcqWzW1J7tBOCgqDBHHA7TYIRAgulLJpFvi_5Iw6Y1A2QOo1N4MFv6cjWft28B4z6vzNe9-etlsn4pJA--g3fydxDc.; isg=BNDQjY51utpNoGWOeaq5eOihoR4imbTj3pjtcMqhxyv-BXCvcqgLcyd_3c3l1Wy7; uc1=cookie16=U%2BGCWk%2F74Mx5tgzv3dWpnhjPaQ%3D%3D&amp;cookie21=W5iHLLyFeYZ1WM9hVnmS&amp;cookie15=URm48syIIVrSKA%3D%3D&amp;existShop=false&amp;pas=0&amp;cookie14=UoTUPOT6s4ShJw%3D%3D&amp;tag=8&amp;lng=zh_CN'</span>,</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">        h = requests.get(url, headers = headers)</span><br><span class="line">        h.raise_for_status()</span><br><span class="line">        h.encoding = h.apparent_encoding</span><br><span class="line">        <span class="comment">#print(h.text)</span></span><br><span class="line">        <span class="keyword">return</span> h.text</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'html解析失败'</span></span><br></pre></td></tr></table></figure>
+<p><strong>含有多个相等元素</strong>：</p>
+<p>由于含有多个相等元素，可能造成取得中间元素可能与第一个元素相等或与最后一个元素相等，即<strong>不能判断所取得中间元素是属于前一个递增序列还是后一个递增序列</strong>。<img src="/ea94afe4/image-20200519161121365.png" alt="image-20200519161121365" style="zoom:50%;"></p>
+<p>此时就要通过使用<strong>顺序查找</strong>的方法，寻找最小值。</p>
+<p>以下是代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minNumberInRotateArray</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;rotateArray)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> <span class="built_in">size</span> = rotateArray.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">size</span> == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>, mid = <span class="number">0</span>, right = <span class="built_in">size</span> - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(rotateArray[left] &gt;= rotateArray[right]) <span class="comment">// 旋转数组的判断</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (right - left == <span class="number">1</span>)   <span class="comment">// 左右指针指向相邻元素</span></span><br><span class="line">            &#123;</span><br><span class="line">                mid = right;    <span class="comment">// 指向右面的指针的元素为最小值</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            mid = left + (right - left)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (rotateArray[left] == rotateArray[right] &amp;&amp; rotateArray[mid] == rotateArray[left]) <span class="comment">// 当取的中间值与左右指针指向的元素相等</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">return</span> minNum(rotateArray, left, right); <span class="comment">// 顺序查找</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (rotateArray[mid] &gt;= rotateArray[left])</span><br><span class="line">                left = mid;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                right = mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> rotateArray[mid];</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minNum</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;num, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = num[left];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = left + <span class="number">1</span>; i &lt; right; i++) <span class="comment">// 只需遍历除去第一个和最后一个的中间数组</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (result &gt; num[i])</span><br><span class="line">            &#123;</span><br><span class="line">                result = num[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p>修改划线位置，把自己的user-agent和cookie粘贴即可。</p>
-<p><img src="/a4e5e07c/p4.jpg" alt></p>
-<p>至此，若代码没有拼写等低级错误就会成功输出正确信息。</p>
-<p><img src="/a4e5e07c/p5.jpg" alt></p>
-<p>我自己就是因为<u><strong>拼写错误</strong></u>只输出了表头。</p>
-<p><img src="/a4e5e07c/p6.jpg" alt></p>
+<p>参考博文链接：<a href="https://cuijiahua.com/blog/2017/11/basis_6.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2017/11/basis_6.html</a></p>
 <hr>
-<p>另外一个检查错误的技巧就是巧用print（）函数，来检查代码执行到哪里出错，以及是否输出正确信息。我就是通过这个方法一步步查找到<code>plt</code>得到的返回值为零，然后发现<code>price</code>拼写错误了。</p>
-<hr>
-<p>谢谢阅读:happy:</p>
 
     </div>
     
@@ -328,8 +343,9 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
-              <a href="/tags/%E7%88%AC%E8%99%AB/" rel="tag"><i class="fa fa-tag"></i> 爬虫</a>
+              <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 数组</a>
+              <a href="/tags/%E5%89%91%E6%8C%87Offer/" rel="tag"><i class="fa fa-tag"></i> 剑指Offer</a>
+              <a href="/tags/%E6%9F%A5%E6%89%BE/" rel="tag"><i class="fa fa-tag"></i> 查找</a>
           </div>
     
         
@@ -338,13 +354,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/undefined.html" rel="prev" title="各板块透明度设置（无坑版）">
-      <i class="fa fa-chevron-left"></i> 各板块透明度设置（无坑版）
+    <a href="/ee040603.html" rel="prev" title="图">
+      <i class="fa fa-chevron-left"></i> 图
     </a></div>
-      <div class="post-nav-item">
-    <a href="/b6f9ab9c.html" rel="next" title="线性表笔记之于大话数据结构">
-      线性表笔记之于大话数据结构 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -362,9 +375,9 @@
    <!-- JS库 sweetalert 引用本地路径 -->
   <script src="/js/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 zerofly 的个人博客">zerofly</a></p>
-  <p><span>发布时间:</span>2020年04月05日 - 21:04</p>
-  <p><span>原始链接:</span><a href="/a4e5e07c.html" title="爬取淘宝商品名称和价格">http://yoursite.com/a4e5e07c.html</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/a4e5e07c.html"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2020年05月19日 - 10:05</p>
+  <p><span>原始链接:</span><a href="/ea94afe4.html" title="求旋转数组最小值(C++版)">http://yoursite.com/ea94afe4.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/ea94afe4.html"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span> 转载请保留原文链接及作者。</p>  
 </div>
@@ -436,6 +449,7 @@
     
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#刷题平台"><span class="nav-number">1.</span> <span class="nav-text">刷题平台</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">2.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目分析"><span class="nav-number">3.</span> <span class="nav-text">题目分析</span></a></li></ol></div>
       </div>
       <!--/noindex-->
     
