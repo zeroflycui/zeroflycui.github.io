@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>调整数组奇数在前偶数在后（C++）</title>
+      <link href="/558b5743.html"/>
+      <url>/558b5743.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="刷题平台"><a href="#刷题平台" class="headerlink" title="刷题平台"></a>刷题平台</h1><p><a href="https://www.nowcoder.com" target="_blank" rel="noopener">牛客网</a></p><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>输入一个整数数组，实现一个函数来调整改数组中数字的顺序，使得所有的奇数位于数组的前半部分，所有的偶数位于数组的后半部分，并<strong>保证奇数和奇数，偶数和偶数之间的相对位置不变</strong>。</p><h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>根据题意可知将数组分为两个部分，可以考虑两端都可插入的<strong>双向数组deque容器</strong>。</p><p>然后通过使用vector容器的赋值操作<code>assign</code>把deque容器的值赋值给vector容器array。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">reOrderArray</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;<span class="built_in">array</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">deque</span>&lt;<span class="keyword">int</span>&gt; result;</span><br><span class="line">        <span class="keyword">int</span> <span class="built_in">size</span> = <span class="built_in">array</span>.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">size</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">array</span>[i] % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">                result.push_back(<span class="built_in">array</span>[i]);</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">array</span>[<span class="built_in">size</span><span class="number">-1</span>-i] % <span class="number">2</span> == <span class="number">1</span>) <span class="comment">// 向前插入奇数时，为了保证奇与奇的相对位置，需倒序遍历</span></span><br><span class="line">                result.push_front(<span class="built_in">array</span>[<span class="built_in">size</span><span class="number">-1</span>-i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">array</span>.assign(result.<span class="built_in">begin</span>(), result.<span class="built_in">end</span>());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>vector容器中的<code>assign(beg, end)</code>即将[beg, end]区间的值赋值给本身。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剑指Offer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数值得整数次方（C++版）</title>
       <link href="/5ba1c33c.html"/>
       <url>/5ba1c33c.html</url>
