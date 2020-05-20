@@ -21,15 +21,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#7400a1","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zerofly&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
+  <meta name="description" content="计算二进制中1的个数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在二进制中寻找1的个数（C++版）">
+<meta property="og:url" content="http://yoursite.com/9ce48081.html">
 <meta property="og:site_name" content="zerofly&#39;s Blog">
+<meta property="og:description" content="计算二进制中1的个数">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-20T02:29:06.000Z">
+<meta property="article:modified_time" content="2020-05-20T03:32:25.609Z">
 <meta property="article:author" content="zerofly">
+<meta property="article:tag" content="二进制">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+<link rel="canonical" href="http://yoursite.com/9ce48081.html">
 
 
 <script id="page-configurations">
@@ -37,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: 数据结构 | zerofly's Blog</title>
+  <title>在二进制中寻找1的个数（C++版） | zerofly's Blog</title>
   
 
 
@@ -181,57 +186,179 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">数据结构
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/9ce48081.html">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="zerofly">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zerofly's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          在二进制中寻找1的个数（C++版）
+        </h1>
+    
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+    
+              <time title="创建时间：2020-05-20 10:29:06 / 修改时间：11:32:25" itemprop="dateCreated datePublished" datetime="2020-05-20T10:29:06+08:00">2020-05-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%91%E6%8C%87Offer/" itemprop="url" rel="index"><span itemprop="name">剑指Offer</span></a>
+                </span>
+            </span>
+    
+          
+          
+          <br>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/9ce48081.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/9ce48081.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>567</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+            <div class="post-description">计算二进制中1的个数</div>
+    
+        </div>
+      </header>
+    
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+    
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+        <h1 id="刷题平台"><a href="#刷题平台" class="headerlink" title="刷题平台"></a>刷题平台</h1><p><a href="https://www.nowcoder.com" target="_blank" rel="noopener">牛客网</a></p>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>输入一个整数，输出该数二进制表中1的个数。其中负数用补码表示。</p>
+<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>由整数转换为二进制数后，可知任何一个<strong><em>非零整数，转换为二进制后至少含有一个  1</em></strong>.</p>
+<p><strong><em>将转换后的二进制中最右边的 1 元素，进行完二进制数减 1 后变为 0 ，后面的 0 全部变为 1 ，之前的元素不变. 将减 1 后的二进制数与原二进制数进行与操作，的到的结果就是将最右边的 1 去掉后的二进制数。</em></strong>每进行一次这样的操作，就相当于二进制中有一个 1 .</p>
+<p>例如：转换后的二进制数为 10010. 将最右边的 1 减去后变成 10001，10001&amp;10010 = 10000，可知每完成一次这样的操作，二进制中便有一个元素 1 .</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">NumberOf1</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (n)</span><br><span class="line">        &#123;</span><br><span class="line">            count += <span class="number">1</span>; <span class="comment">// 也可以是++count，count++,</span></span><br><span class="line">            n = (n<span class="number">-1</span>) &amp; n;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>补码：</p>
+<p>正数的补码是其二进制表示，即与源码相同。</p>
+<p>负数的补码是将其原码的所有位取反，然后加 1 .</p>
+<p>O的补码是唯一的，即为 0 .</p>
+<hr>
+<p>参考博文链接：<a href="https://cuijiahua.com/blog/2017/11/basis_11.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2017/11/basis_11.html</a></p>
+
     </div>
+    
+    
+    
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" rel="tag"><i class="fa fa-tag"></i> 二进制</a>
+          </div>
+    
+        
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-04-10T08:18:51+08:00"
-              content="2020-04-10">
-          04-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/b6f9ab9c.html" itemprop="url">
-            <span itemprop="name">线性表笔记之于大话数据结构</span>
-          </a>
-      </div>
-
-    </header>
+    
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/ea94afe4.html" rel="prev" title="求旋转数组最小值(C++版)">
+      <i class="fa fa-chevron-left"></i> 求旋转数组最小值(C++版)
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
+  
+  
+  
+<div>
+	
+		  
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
 
-    </div>
-  </div>
-  
-  
-  
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+   <!-- JS库 sweetalert 引用本地路径 -->
+  <script src="/js/sweetalert.min.js"></script>
+  <p><span>文章作者:</span><a href="/" title="访问 zerofly 的个人博客">zerofly</a></p>
+  <p><span>发布时间:</span>2020年05月20日 - 10:05</p>
+  <p><span>原始链接:</span><a href="/9ce48081.html" title="在二进制中寻找1的个数（C++版）">http://yoursite.com/9ce48081.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/9ce48081.html"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
 
-  
+	
+</div>
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -278,6 +405,7 @@
     
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#刷题平台"><span class="nav-number">1.</span> <span class="nav-text">刷题平台</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">2.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">3.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
       </div>
       <!--/noindex-->
     
