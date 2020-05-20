@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>输出链表的倒数第k个结点（C++）</title>
+      <link href="/1c380935.html"/>
+      <url>/1c380935.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="刷题平台"><a href="#刷题平台" class="headerlink" title="刷题平台"></a>刷题平台</h1><p><a href="https://www.nowcoder.com" target="_blank" rel="noopener">牛客网</a></p><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>输入一个链表，输出链表中倒数第k个结点。</p><h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>假设两个指针p1，p2，两个指针都指向链表的头指针。</p><p>p1指针依次遍历链表，直到移动到第 k 个结点时，p2指针开始从表头开始遍历。</p><p>p1和p2两指针继续<strong><em>同时</em></strong>往后遍历（<strong>p1和p2两指针的间隔是固定的</strong>），直到p1指针指向边表末尾时，p2指针指向的结点就是链表中倒数第 k 个结点。</p><p>以下链表输出倒数第2个结点，</p><p>p1指针指向第2个结点，p2指针指向第1个结点。<img src="/1c380935/image-20200520213343088.png" alt="image-20200520213343088" style="zoom:50%;"></p><p>p1和p2指针同时向后遍历，直到链表末尾。<img src="/1c380935/image-20200520213545576.png" alt="image-20200520213545576" style="zoom:50%;"></p><p>p2指针指向的结点就是要输出的倒数第 2 个结点。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">next</span>;</span></span><br><span class="line">    ListNode(<span class="keyword">int</span> x):val(x), next(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">FindKthToTail</span><span class="params">(ListNode *pListHead, <span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pListHead == <span class="literal">NULL</span> || k == <span class="number">0</span>) <span class="comment">// 链表为空或要求输出的结点位置不合法</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        ListNode *p1 = pListHead;</span><br><span class="line">        ListNode *p2 = pListHead;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k<span class="number">-1</span>; i++) <span class="comment">// 得到p1指向第 k 个结点的指针</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (p1-&gt;next != <span class="literal">NULL</span>)</span><br><span class="line">                p1 = p1-&gt;next;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (p1-&gt;next != <span class="literal">NULL</span>) <span class="comment">// p1,p2指针同时向后遍历</span></span><br><span class="line">        &#123;</span><br><span class="line">            p1 = p1-&gt;next;</span><br><span class="line">            p2 = p2-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> p2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><hr><p>参考博文链接：<a href="https://cuijiahua.com/blog/2017/12/basis_14.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2017/12/basis_14.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剑指Offer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 链表shu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>调整数组奇数在前偶数在后（C++）</title>
       <link href="/558b5743.html"/>
       <url>/558b5743.html</url>
