@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>合并顺序链表（C++）</title>
+      <link href="/6e4526ea.html"/>
+      <url>/6e4526ea.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="刷题平台"><a href="#刷题平台" class="headerlink" title="刷题平台"></a>刷题平台</h1><p><a href="https://www.nowcoder.com/" target="_blank" rel="noopener">牛客网</a></p><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>输入连个单调递增的链表，输出两个链表合成后的链表，并保证新的链表是非单调递减的。</p><h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><ul><li>当链表 1 为空，则直接返回链表 2 ；当链表 2 为空时，直接返回链表 1；当链表 1链表 2都为空时，返回空。</li><li>判断两个链表的头结点的大小，将较小的结点放入新链表。然后通过递归的方法，遍历两个链表。</li></ul><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">next</span>;</span></span><br><span class="line">    ListNode(<span class="keyword">int</span> x): val(x), next(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode *<span class="title">Merge</span><span class="params">(ListNode *pHead1, ListNode *pHead2)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pHead1 == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> pHead2;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (pHead2 == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> pHead1;</span><br><span class="line">        ListNode *NewMerge = <span class="literal">NULL</span>; <span class="comment">// 新链表</span></span><br><span class="line">        <span class="keyword">if</span> (pHead1-&gt;val &lt; pHead2-&gt;val) <span class="comment">// 判断两链表的头结点的大小</span></span><br><span class="line">        &#123;</span><br><span class="line">            NewMerge = pHead1;</span><br><span class="line">            NewMerge-&gt;next = Merge(NewMerge-&gt;next, pHead2);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            NewMerge = pHead2;</span><br><span class="line">            NewMerge-&gt;next = Merge(pHead1, NewMerge-&gt;next);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> NewMerge;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><hr><p>参考博文链接：<a href="https://cuijiahua.com/blog/2017/12/basis_16.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2017/12/basis_16.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剑指Offer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 链表 </tag>
+            
+            <tag> 递归 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>反转链表（C++）</title>
       <link href="/972829f4.html"/>
       <url>/972829f4.html</url>
