@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>依次打印二叉树结点</title>
+      <link href="/3db0c412.html"/>
+      <url>/3db0c412.html</url>
+      
+        <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>从上到下打印出二叉树的每个节点，同层节点从左至右打印。</p><h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>题目的要求时从上到下，每层从左到右，即按层依次输出。</p><p>通过队列实现二叉树的遍历，同样还有图的遍历也可以使用这个方法。</p><p>这需要借助<strong>队列（queue）</strong>来进行排序输出。然后把输出结果存放到一个vector容器中。把每层结点依次放到队列中，然后依次输出。</p><ul><li><p>先把根结点存入队列</p></li><li><p>只要队列不为空则执行以下步骤；</p><ul><li>把队列的头结点压入到vector容器中</li><li>若队列的头结点的左结点不为空，则将左结点存入队列中</li><li>若队列的头结点的右结点不为空，则将右结点存入队列中</li><li>然后删除队列的头结点</li></ul></li><li><p>输出vector容器；</p></li></ul><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>* <span class="title">left</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>* <span class="title">right</span>;</span></span><br><span class="line">    TreeNode (<span class="keyword">int</span> x): val(x), left(<span class="literal">NULL</span>), right(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">PrintFromTopToBottom</span><span class="params">(TreeNode *root)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        Q.push(root);</span><br><span class="line">        <span class="keyword">while</span> (!Q.empty())</span><br><span class="line">        &#123;</span><br><span class="line">            TreeNode * tmp;</span><br><span class="line">            tmp = Q.front(); <span class="comment">// 临时值赋值队列的头结点</span></span><br><span class="line">            result.push_back(tmp-&gt;val);</span><br><span class="line">            <span class="keyword">if</span> (tmp-&gt;left != <span class="literal">NULL</span>)</span><br><span class="line">                Q.push(tmp-&gt;left);</span><br><span class="line">            <span class="keyword">if</span> (tmp-&gt;right != <span class="literal">NULL</span>)</span><br><span class="line">                Q.push(tmp-&gt;right);</span><br><span class="line">            Q.pop();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; result;</span><br><span class="line">    <span class="built_in">queue</span>&lt;TreeNode *&gt; Q;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><hr><p>参考博文链接：<a href="https://cuijiahua.com/blog/2017/12/basis_22.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2017/12/basis_22.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剑指Offer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二叉树 </tag>
+            
+            <tag> 队列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>判断是否为栈的弹出顺序</title>
       <link href="/b53ac718.html"/>
       <url>/b53ac718.html</url>
@@ -326,9 +353,9 @@
       
         <tags>
             
-            <tag> 栈 </tag>
-            
             <tag> 队列 </tag>
+            
+            <tag> 栈 </tag>
             
         </tags>
       
