@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>数组中出现次数超过一半的数字</title>
+      <link href="/a01a37fb.html"/>
+      <url>/a01a37fb.html</url>
+      
+        <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。例如输入一个长度为9的数组{1,2,3,2,2,2,5,4,2}。由于数字2在数组中出现了5次，超过数组长度的一半，因此输出2。若不存在则输出0.</p><h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>要找的元素的出现次数是超过数组一半的，也就是说与该元素相同的值占据数组的一半之多。面对这种要求可以采用<strong>阵地攻守思想</strong>。真正守下阵地，并占据数组个数多于数组长度一半的元素，称为兵王。</p><ul><li>数组第一个元素作为第一个士兵，守阵地，此时这个小分队的成员人数count=1；</li><li>当遇到相同元素时，小分队人数 +1 count++；</li><li>当遇到不同的元素时，同归于尽，小分队人数 -1 count–；</li><li>当小分队人数为 0 时，换下一个元素组成新的小分队守护阵地，若上叙步骤进行。</li><li>当遍历完整个数组，当小分队中还有人在时，说明这个元素<strong>有可能</strong>是要找的。</li><li>再遍历整个数组，记录数组中这个元素的个数是否大于数组长度的一半。</li></ul><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">MoreThanHalfNum_Solution</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; numbers)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (numbers.empty())</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> length = numbers.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">int</span> times = <span class="number">1</span>, result = numbers[<span class="number">0</span>];</span><br><span class="line">        <span class="comment">// 找到最后坚守阵地的士兵</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;length; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (times==<span class="number">0</span>) <span class="comment">// 小分队全部牺牲，将当前元素作为新的小分队成员</span></span><br><span class="line">            &#123;</span><br><span class="line">                result = numbers[i];</span><br><span class="line">                times = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (numbers[i] == result) <span class="comment">// 遇到相同的士兵，加入小分队</span></span><br><span class="line">                times++;</span><br><span class="line">            <span class="keyword">else</span> <span class="comment">// 遇到的是不同的敌人，同归于尽</span></span><br><span class="line">                times--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 判断最后坚守的士兵（元素），是否为真正要寻找的兵王</span></span><br><span class="line">        times = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;length; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (numbers[i] == result)</span><br><span class="line">                times++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (times&gt;(length/<span class="number">2</span>) ? result : <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><hr><p>参考博文链接：<a href="https://www.nowcoder.com/questionTerminal/e8a1b01a2df14cb2b228b30ee6a92163?f=discussion" target="_blank" rel="noopener">https://www.nowcoder.com/questionTerminal/e8a1b01a2df14cb2b228b30ee6a92163?f=discussion</a></p><p><a href="https://cuijiahua.com/blog/2017/12/basis_28.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2017/12/basis_28.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剑指Offer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>字符串的排序</title>
       <link href="/e6489f2a.html"/>
       <url>/e6489f2a.html</url>
