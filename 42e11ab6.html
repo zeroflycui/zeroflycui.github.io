@@ -21,15 +21,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#7400a1","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zerofly&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="求从任意非负整数区间中1出现的次数。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="整数中1出现的次数">
+<meta property="og:url" content="http://yoursite.com/42e11ab6.html">
 <meta property="og:site_name" content="zerofly&#39;s Blog">
+<meta property="og:description" content="求从任意非负整数区间中1出现的次数。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-28T01:16:55.000Z">
+<meta property="article:modified_time" content="2020-05-28T03:03:02.956Z">
 <meta property="article:author" content="zerofly">
+<meta property="article:tag" content="查找">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/archives/">
+<link rel="canonical" href="http://yoursite.com/42e11ab6.html">
 
 
 <script id="page-configurations">
@@ -37,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | zerofly's Blog</title>
+  <title>整数中1出现的次数 | zerofly's Blog</title>
   
 
 
@@ -181,239 +186,189 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 25 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/42e11ab6.html">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="zerofly">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zerofly's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          整数中1出现的次数
+        </h1>
+    
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+    
+              <time title="创建时间：2020-05-28 09:16:55 / 修改时间：11:03:02" itemprop="dateCreated datePublished" datetime="2020-05-28T09:16:55+08:00">2020-05-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%91%E6%8C%87Offer/" itemprop="url" rel="index"><span itemprop="name">剑指Offer</span></a>
+                </span>
+            </span>
+    
+          
+          
+          <br>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/42e11ab6.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/42e11ab6.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+            <div class="post-description">求从任意非负整数区间中1出现的次数。</div>
+    
+        </div>
+      </header>
+    
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+    
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
+        <hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>求出任意非负整数区间中1出现的次数。</p>
+<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>可以采用数学之美中提出的方法，对整数进行分割，通过使用1，10，100，等依次乘10的顺序，将整数分为个位，十位，百位，等等。然后对每一位上<code>1</code>出现的次数进行统计。</p>
+<p>以下内容有自己理解的部分，<strong>仅供参考，若有错误请大佬指教</strong></p>
+<ul>
+<li>把给定的整数<code>n</code>进行分割，分为两部分，高位<code>n/i</code>和地位<code>n%i</code>；</li>
+<li>例如对整数n=3145，进行分析：<ul>
+<li>个位为5 &gt; 2，当个位取 1 时，分为<code>a=n/1=3145,  b=n%1=0</code>，个位前面的数字可由 0~314组成，共有<code>a/10+1 = 315</code>；</li>
+<li>十位为4 &gt; 2，当个位取 1 时，分为 <code>a=n/10=314,   b=n%10=5</code>，十位前面的数字可由 0<del>31 组成，十位后面可由 0</del>9 组成（因为十位大于 1，当十位借去1后相当于还剩余30，这足够个位 0~9数字的出现），因此共有<code>a/10 + 1 = 32</code>次包含 10 个连续点，因此十位为 1 的次数为：<code>(a/10 + 1)*10</code>；</li>
+<li>百位为 1 ，当百位取 1 时，分为 <code>a=n/100=31   b=n%100=45</code>，百位前面由 0<del>3组成，后面只能由 0</del>45构成，因此需要向前借 1 ，即前面由 0<del>2组成，后面由 0</del>99组成。此时会有 <code>a/10=3</code>次包含100个连续点，由于百位为1，所以还包含 <code>b+1=46</code>个点，因此百位为 1 的次数共有 <code>a/10*100 + (b+1)=346</code>;</li>
+<li>千位为3 &gt; 2，当取 1 时，分为 <code>a=n/1000=3   b=n%1000=145</code>，千位后面由 0~999组成，因此千位上 1 出现的次数为 <code>a/10 + 1 = 1</code>次包含1000个连续点，因此千位上为 1 的次数为 <code>(a/10 + 1)*1000=1000</code>；</li>
+</ul>
+</li>
+</ul>
+<p>对于当前位为 0 的情况，和取 1 的情况类似，例如 n=502，十位为0，当十位取 1 时，高位<code>a=n/10=50</code>,低位<code>b=n%10=2</code>十位之前由0<del>5组成，而十位之后由 0</del>2组成；因此需要向高位借 1 ，变为，高位由  0<del>4组成，地位由 0</del>9组成。所以在十位上 1 出现的次数为：<code>a/10=5</code>次包含10个连续点，共<code>(a/10)*10=50</code>；</p>
+<p>综上可以总结为，无论当前位置无论是 &gt;=2, 还是 等于 0 或 1，该位置上1出现的次数都可以通过以下公式来计算：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(a + 8)&#x2F;10 * i + (a%10 &#x3D;&#x3D; 1) * (b + 1);  i &#x3D; (1,10,100,1000 ...)</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>关于 a+8， 因为当前位置上的数值 &gt; 2 时，该位置上 1 出现的次数为 <code>a/10 + 1</code> 与 小于  2 时的 <code>a/10</code>相差 1，由于两个公式的差异是以 2 为分界线，通过 a+8，来构造进位与不进位的效果，使所有情况使用同一公式。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">NumberOf1Between1AndN_Solution</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i *= <span class="number">10</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> a = n / i, b = n % i;</span><br><span class="line">            count += (a + <span class="number">8</span>) / <span class="number">10</span> * i + (a % <span class="number">10</span> == <span class="number">1</span>)*(b + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-28T09:16:55+08:00"
-              content="2020-05-28">
-          05-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/42e11ab6.html" itemprop="url">
-            <span itemprop="name">整数中1出现的次数</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-27T09:48:13+08:00"
-              content="2020-05-27">
-          05-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/47d70a1.html" itemprop="url">
-            <span itemprop="name">最小的k个数</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-26T16:15:20+08:00"
-              content="2020-05-26">
-          05-26
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/a01a37fb.html" itemprop="url">
-            <span itemprop="name">数组中出现次数超过一半的数字</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-26T09:22:16+08:00"
-              content="2020-05-26">
-          05-26
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/e6489f2a.html" itemprop="url">
-            <span itemprop="name">字符串的排序</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-25T16:12:06+08:00"
-              content="2020-05-25">
-          05-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/ed8bddee.html" itemprop="url">
-            <span itemprop="name">二叉搜索树转换为双向链表</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-25T09:44:32+08:00"
-              content="2020-05-25">
-          05-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/68dc24ea.html" itemprop="url">
-            <span itemprop="name">复杂链表的复制</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-24T17:10:14+08:00"
-              content="2020-05-24">
-          05-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/d8629079.html" itemprop="url">
-            <span itemprop="name">二叉树中和为某一值路径</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-24T10:57:03+08:00"
-              content="2020-05-24">
-          05-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/b31dcda.html" itemprop="url">
-            <span itemprop="name">二叉树的后序遍历序列</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-23T18:05:36+08:00"
-              content="2020-05-23">
-          05-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/3db0c412.html" itemprop="url">
-            <span itemprop="name">依次打印二叉树结点</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-05-23T14:50:08+08:00"
-              content="2020-05-23">
-          05-23
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/b53ac718.html" itemprop="url">
-            <span itemprop="name">判断是否为栈的弹出顺序</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+<p>参考博文链接：<a href="https://cuijiahua.com/blog/2017/12/basis_31.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2017/12/basis_31.html</a></p>
+<p><a href="https://www.nowcoder.com/questionTerminal/bd7f978302044eee894445e244c7eee6?f=discussion" target="_blank" rel="noopener">https://www.nowcoder.com/questionTerminal/bd7f978302044eee894445e244c7eee6?f=discussion</a></p>
 
     </div>
-  </div>
-  
-  
-  
+    
+    
+    
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E6%9F%A5%E6%89%BE/" rel="tag"><i class="fa fa-tag"></i> 查找</a>
+          </div>
+    
+        
 
+    
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/47d70a1.html" rel="prev" title="最小的k个数">
+      <i class="fa fa-chevron-left"></i> 最小的k个数
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
+  
+  
+<div>
+	
+		  
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+   <!-- JS库 sweetalert 引用本地路径 -->
+  <script src="/js/sweetalert.min.js"></script>
+  <p><span>文章作者:</span><a href="/" title="访问 zerofly 的个人博客">zerofly</a></p>
+  <p><span>发布时间:</span>2020年05月28日 - 09:05</p>
+  <p><span>原始链接:</span><a href="/42e11ab6.html" title="整数中1出现的次数">http://yoursite.com/42e11ab6.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/42e11ab6.html"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+	
+</div>
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -460,6 +415,7 @@
     
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
       </div>
       <!--/noindex-->
     
