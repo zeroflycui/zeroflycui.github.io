@@ -21,20 +21,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#7400a1","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="定义栈数据结构，并能够得到栈中所含最小元素。">
+  <meta name="description" content="只包含质因子2、3和5的数称作丑数。求按小到大的顺序的第N个丑数。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="定义栈并得到最小元素">
-<meta property="og:url" content="http://yoursite.com/e36e3ebc.html">
+<meta property="og:title" content="丑数">
+<meta property="og:url" content="http://yoursite.com/73645ce2.html">
 <meta property="og:site_name" content="zerofly&#39;s Blog">
-<meta property="og:description" content="定义栈数据结构，并能够得到栈中所含最小元素。">
+<meta property="og:description" content="只包含质因子2、3和5的数称作丑数。求按小到大的顺序的第N个丑数。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-22T14:16:12.000Z">
-<meta property="article:modified_time" content="2020-05-22T14:55:11.635Z">
+<meta property="article:published_time" content="2020-05-28T10:28:26.000Z">
+<meta property="article:modified_time" content="2020-05-28T11:14:50.285Z">
 <meta property="article:author" content="zerofly">
-<meta property="article:tag" content="栈">
+<meta property="article:tag" content="丑数">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/e36e3ebc.html">
+<link rel="canonical" href="http://yoursite.com/73645ce2.html">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>定义栈并得到最小元素 | zerofly's Blog</title>
+  <title>丑数 | zerofly's Blog</title>
   
 
 
@@ -193,7 +193,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/e36e3ebc.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/73645ce2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -206,7 +206,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          定义栈并得到最小元素
+          丑数
         </h1>
     
         <div class="post-meta">
@@ -217,7 +217,7 @@
               <span class="post-meta-item-text">发表于</span>
               
     
-              <time title="创建时间：2020-05-22 22:16:12 / 修改时间：22:55:11" itemprop="dateCreated datePublished" datetime="2020-05-22T22:16:12+08:00">2020-05-22</time>
+              <time title="创建时间：2020-05-28 18:28:26 / 修改时间：19:14:50" itemprop="dateCreated datePublished" datetime="2020-05-28T18:28:26+08:00">2020-05-28</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,8 +247,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/e36e3ebc.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/e36e3ebc.html" itemprop="commentCount"></span>
+    <a title="valine" href="/73645ce2.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/73645ce2.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -258,7 +258,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>843</span>
+              <span>728</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -267,7 +267,7 @@
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               <span>1 分钟</span>
             </span>
-            <div class="post-description">定义栈数据结构，并能够得到栈中所含最小元素。</div>
+            <div class="post-description">只包含质因子2、3和5的数称作丑数。求按小到大的顺序的第N个丑数。</div>
     
         </div>
       </header>
@@ -279,18 +279,13 @@
     
       
         <hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度为<code>O(1)</code>.保证测试中不会当栈为空的时候，对栈调用<code>pop() min() top()</code>方法。</p>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>可以通过两个栈来实现栈的数据结构。一个栈Data存放数据，另一个栈Min存放最小值。</p>
-<ul>
-<li><strong>入栈</strong>：直接将数据压入数据栈Data中。若最小栈Min<strong>为空</strong>直接将数据压入。若Min栈<strong>不为空</strong>将当前值与栈顶部元素比较，若较小则压入Min栈；否则不做处理。</li>
-<li><strong>出栈</strong>：若数据栈Data和最小栈Min的栈顶元素相同，则弹出Min栈顶元素，同时弹出数据栈Data栈顶元素；否则弹出数据栈Data栈顶元素。</li>
-<li><strong>栈顶元素</strong>：直接用数据栈Data的栈顶元素</li>
-<li><strong>最小元素</strong>：直接调用最小栈Min的栈顶元素</li>
-</ul>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> value)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Data.push(value);</span><br><span class="line">        <span class="keyword">if</span> (Min.empty())</span><br><span class="line">            Min.push(value);</span><br><span class="line">        <span class="keyword">if</span> (Min.top() &gt; value)</span><br><span class="line">            Min.push(value);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!Data.empty()) <span class="comment">//栈不为空</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (Data.top() == Min.top())</span><br><span class="line">                Min.pop();</span><br><span class="line">            Data.pop();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">top</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!Data.empty())</span><br><span class="line">            <span class="keyword">return</span> Data.top();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">min</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!Data.empty())</span><br><span class="line">            <span class="keyword">return</span> Min.top();</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; Data;</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; Min;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
 <hr>
-<p>参考博文链接：<a href="https://cuijiahua.com/blog/2017/12/basis_20.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2017/12/basis_20.html</a></p>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>把只含质因子2、3和5的数称为丑数。例如6、8都是丑数。但14不是，因为有因子 7 .习惯上把 1 当做第一个丑数。求按从小到大的顺序的第N个丑数。</p>
+<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>根据丑数定义，说明丑数只能被2、3、5整除。同时也说明，若已知前面的丑数，乘2、3或5就可以得到之后的丑数。</p>
+<p>例如存在一个乘 2 得到的丑数 T2，排在它之前的每一个丑数乘 2 后都不会 大于当前最大丑数。同样还存在乘3的T3，乘5的T5。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">GetUglyNumber_Solution</span><span class="params">(<span class="keyword">int</span> index)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (index &lt; <span class="number">7</span>) <span class="comment">// 因为 1，2，3，4，5，6都是丑数</span></span><br><span class="line">            <span class="keyword">return</span> index;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">res</span><span class="params">(index)</span></span>; <span class="comment">// ???</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++)</span><br><span class="line">            res[i] = i + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> t2 = <span class="number">3</span>, t3 = <span class="number">2</span>, t5 = <span class="number">1</span>; <span class="comment">// 在前6个丑数中，满足乘相应因子不大于最大丑数6的最大数组下标</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">6</span>; i &lt; index; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            res[i] =<span class="built_in">min</span>(res[t2] * <span class="number">2</span>,<span class="built_in">min</span>(res[t3] * <span class="number">3</span>, res[t5] * <span class="number">5</span>));</span><br><span class="line">            <span class="keyword">while</span> (res[i] &gt;= res[t2] * <span class="number">2</span>)</span><br><span class="line">                t2++;</span><br><span class="line">            <span class="keyword">while</span> (res[i] &gt;= res[t3] * <span class="number">3</span>)</span><br><span class="line">                t3++;</span><br><span class="line">            <span class="keyword">while</span> (res[i] &gt;= res[t5] * <span class="number">5</span>)</span><br><span class="line">                t5++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res[index<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>参考博文链接：<a href="https://cuijiahua.com/blog/2018/01/basis_33.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2018/01/basis_33.html</a></p>
 
     </div>
     
@@ -301,7 +296,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/%E6%A0%88/" rel="tag"><i class="fa fa-tag"></i> 栈</a>
+              <a href="/tags/%E4%B8%91%E6%95%B0/" rel="tag"><i class="fa fa-tag"></i> 丑数</a>
           </div>
     
         
@@ -310,13 +305,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/d660613.html" rel="prev" title="顺时针输出矩阵的值（C++）">
-      <i class="fa fa-chevron-left"></i> 顺时针输出矩阵的值（C++）
+    <a href="/ce969fd0.html" rel="prev" title="把数组排成最小的数">
+      <i class="fa fa-chevron-left"></i> 把数组排成最小的数
     </a></div>
-      <div class="post-nav-item">
-    <a href="/b53ac718.html" rel="next" title="判断是否为栈的弹出顺序">
-      判断是否为栈的弹出顺序 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -334,9 +326,9 @@
    <!-- JS库 sweetalert 引用本地路径 -->
   <script src="/js/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 zerofly 的个人博客">zerofly</a></p>
-  <p><span>发布时间:</span>2020年05月22日 - 22:05</p>
-  <p><span>原始链接:</span><a href="/e36e3ebc.html" title="定义栈并得到最小元素">http://yoursite.com/e36e3ebc.html</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/e36e3ebc.html"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2020年05月28日 - 18:05</p>
+  <p><span>原始链接:</span><a href="/73645ce2.html" title="丑数">http://yoursite.com/73645ce2.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/73645ce2.html"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span> 转载请保留原文链接及作者。</p>  
 </div>
