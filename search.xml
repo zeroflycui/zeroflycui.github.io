@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>左旋转字符串</title>
+      <link href="/eb78a2fc.html"/>
+      <url>/eb78a2fc.html</url>
+      
+        <content type="html"><![CDATA[<hr><hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>汇编语言中有一种移位指令叫做循环左移（ROL），现在有个简单的任务，就是用字符串模拟这个指令的运算结果。对于一个给定的字符序列S，请你把其循环左移K位后的序列输出。例如，字符序列S=”abcXYZdef”,要求输出循环左移3位后的结果，即“XYZdefabc”。是不是很简单？OK，搞定它！</p><h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>通过给的例子，我第一个想法是，使用queue容器，但发现给的程序返回类型为 <code>string</code>,所以应该是直接对给定的字符串进行操作。</p><p>怎样把字符串前面的字符和后面的字符交换位置呢？想到了<code>swap()</code>交换函数。</p><ul><li>先将前 <code>n-1</code>字符翻转；</li><li>再将剩余的字符翻转；</li><li>将翻转后的字符组成新的字符串，然后将新字符串翻转，即可得到结果；</li></ul><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">LeftRotateString</span><span class="params">(<span class="built_in">string</span> str, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> length = str.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">if</span> (length == <span class="number">0</span> || n &lt; <span class="number">0</span> || n &gt; length)</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">string</span> result = str;</span><br><span class="line">        <span class="comment">// 翻转前 n 个字符</span></span><br><span class="line">        Reverse(result, <span class="number">0</span>, n - <span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 翻转剩余字符</span></span><br><span class="line">        Reverse(result, n, length - <span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 翻转新的字符串</span></span><br><span class="line">        Reverse(result, <span class="number">0</span>, length - <span class="number">1</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 翻转函数</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Reverse</span><span class="params">(<span class="built_in">string</span> &amp;str, <span class="keyword">int</span> <span class="built_in">begin</span>, <span class="keyword">int</span> <span class="built_in">end</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="built_in">begin</span> &lt; <span class="built_in">end</span>)</span><br><span class="line">            swap(str[<span class="built_in">begin</span>++], str[<span class="built_in">end</span>--]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>参考链接：<a href="https://cuijiahua.com/blog/2018/01/basis_43.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2018/01/basis_43.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剑指Offer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 字符串翻转 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>和为S的两个数字</title>
       <link href="/18a4cd01.html"/>
       <url>/18a4cd01.html</url>
