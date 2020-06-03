@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>构建乘积数组</title>
+      <link href="/f6c89aa9.html"/>
+      <url>/f6c89aa9.html</url>
+      
+        <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个数组A[0,1,…,n-1],请构建一个数组B[0,1,…,n-1],其中B中的元素B[i]=A[0]<em>A[1]</em>…<em>A[i-1]*A[i+1]</em>…*A[n-1]。不能使用除法。（注意：规定B[0] = A[1] * A[2] * … * A[n-1]，B[n-1] = A[0] * A[1] * … * A[n-2];）</p><h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>本题的目的，就是求出不包含第i个元素，其余元素之积，构成新的数组B。</p><p>通过一个例子来说明：</p><p><img src="/f6c89aa9/image-20200603205347752.png" alt="image-20200603205347752"></p><p>数组A={1,2,3,4,5}, 数组B为上图中，每行除去绿色块其余部分的乘积。通过观察可知，每行的乘积都可分为两部分，即<code>（黄色部分之积） * （粉色部分之积）</code>定义粉色部分之积为<code>C[i]</code>,黄色部分之积为<code>D[i]</code>.</p><p>通过图分析可知，粉色部分<code>C[i] = C[i - 1] * A[i - 1]</code>，黄色部分<code>D[i] = D[i + 1] * A[i + 1]</code></p><p>可以先求出粉色部分的积，和黄色部分的积，然后求出数组B。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">multiply</span> <span class="params">(<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;A)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = A.<span class="built_in">size</span>();</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">B</span><span class="params">(n)</span></span>;</span><br><span class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> B;</span><br><span class="line">        <span class="comment">// 先把粉色部分之积存放在B中</span></span><br><span class="line">        B[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            B[i] = B[i - <span class="number">1</span>] * A[i - <span class="number">1</span>]; <span class="comment">// 粉色部分， 第 i 行的积。</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 计算黄色部分的积，并求出B</span></span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = n - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">        &#123;</span><br><span class="line">            temp *= A[i + <span class="number">1</span>]; <span class="comment">// 黄色部分，第 i 行的积</span></span><br><span class="line">            B[i] *= temp; <span class="comment">// 数组B，第 i 行的积</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> B;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>参考博文链接：<a href="https://cuijiahua.com/blog/2018/01/basis_51.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2018/01/basis_51.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剑指Offer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数组中重复的数字</title>
       <link href="/8f265477.html"/>
       <url>/8f265477.html</url>
