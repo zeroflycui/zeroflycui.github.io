@@ -21,15 +21,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#7400a1","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zerofly&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2020/06/index.html">
+  <meta name="description" content="判断一个字符串，是否匹配包含&#39;.&#39;和&#39;*&#39;正则表达式的匹配字符串。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式匹配">
+<meta property="og:url" content="http://yoursite.com/8cb20708.html">
 <meta property="og:site_name" content="zerofly&#39;s Blog">
+<meta property="og:description" content="判断一个字符串，是否匹配包含&#39;.&#39;和&#39;*&#39;正则表达式的匹配字符串。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-04T01:10:30.000Z">
+<meta property="article:modified_time" content="2020-06-04T01:54:15.678Z">
 <meta property="article:author" content="zerofly">
+<meta property="article:tag" content="字符串">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/archives/2020/06/">
+<link rel="canonical" href="http://yoursite.com/8cb20708.html">
 
 
 <script id="page-configurations">
@@ -37,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | zerofly's Blog</title>
+  <title>正则表达式匹配 | zerofly's Blog</title>
   
 
 
@@ -181,237 +186,189 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        
-        <span class="collection-header">还行! 目前共计 45 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/8cb20708.html">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="zerofly">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zerofly's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          正则表达式匹配
+        </h1>
+    
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+    
+              <time title="创建时间：2020-06-04 09:10:30 / 修改时间：09:54:15" itemprop="dateCreated datePublished" datetime="2020-06-04T09:10:30+08:00">2020-06-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%91%E6%8C%87Offer/" itemprop="url" rel="index"><span itemprop="name">剑指Offer</span></a>
+                </span>
+            </span>
+    
+          
+          
+          <br>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/8cb20708.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/8cb20708.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+            <div class="post-description">判断一个字符串，是否匹配包含'.'和'*'正则表达式的匹配字符串。</div>
+    
+        </div>
+      </header>
+    
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+    
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
+        <hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>请实现一个函数用来匹配包括’.’和’<em>‘的正则表达式。模式中的字符’.’表示任意一个字符，而’</em>‘表示它前面的字符可以出现任意次（包含0次）。 在本题中，匹配是指字符串的所有字符匹配整个模式。例如，字符串”aaa”与模式”a.a”和”ab<em>ac</em>a”匹配，但是与”aa.a”和”ab*a”均不匹配。</p>
+<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>通过给出的例子可以看出：当匹配的当前字符相等或者匹配字符是<code>&#39;.&#39;</code>时，直接将字符串和匹配字符串进行下一位匹配；否则直接返回<code>false</code>.</p>
+<p>但是若当匹配的字符为<code>&#39;*&#39;</code>时就比较麻烦：</p>
+<p>若匹配的下一个字符为<code>&#39;*&#39;</code>时，可以分为以下几种情况：</p>
+<ul>
+<li><p>字符串中当前字符与匹配字符串中当前字符<strong>相等</strong>，或者匹配字符串中当前字符为<code>&#39;.&#39;</code>时，又会有以下几种情况</p>
+<ul>
+<li>当<code>&#39;*&#39;</code>前面的字符出现<code>0</code>次时，字符串中的字符<strong>保持当前位</strong>与匹配字符串中字符<strong>后移两位</strong>比较，<code>matchCore（str, pattern + 2 ）</code></li>
+<li>当<code>&#39;*&#39;</code>前面的字符出现<code>1</code>次时，字符串中的字符<strong>后移一位</strong>与匹配字符串中字符<strong>后移两位</strong>(跳过<code>&#39;*&#39;</code>)比较，<code>matchCore(str + 1, pattern + 2)</code></li>
+<li>当<code>&#39;*&#39;</code>前面的字符出现<code>2</code>次以上时，字符串中的字符<strong>后移一位</strong>与匹配字符串中<strong>当前字符</strong>比较，<code>matchCore(str + 1, pattern)</code></li>
+</ul>
+</li>
+<li><p>字符串中当前字符与匹配字符串中当前字符<strong>不相等</strong>，则直接比较字符串中的<strong>当前字符</strong>与匹配字符串中字符<strong>后移两位</strong>(跳过<code>&#39;*&#39;</code>)，<code>matchCore(str, pattern + 2)</code></p>
+</li>
+</ul>
+<p>若字符串当前字符与匹配字符串的当前字符<strong>相等</strong>，或者匹配字符串的当前字符是<code>&#39;.&#39;</code></p>
+<ul>
+<li>字符串中的字符<strong>后移一位</strong>与匹配字符串中字符<strong>后移两位</strong>(跳过<code>&#39;*&#39;</code>)比较，<code>matchCore(str + 1, pattern + 2)</code></li>
+</ul>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">match</span> <span class="params">(<span class="keyword">char</span>* str, <span class="keyword">char</span>* pattern)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str == <span class="literal">NULL</span> || pattern == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">return</span> matchCore(str, pattern);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">matchCore</span> <span class="params">(<span class="keyword">char</span>* str, <span class="keyword">char</span>* pattern)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (*str == <span class="string">'\0'</span> &amp;&amp; *pattern == <span class="string">'\0'</span>) <span class="comment">// 若两个字符同时结束则返回true</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (*str != <span class="string">'\0'</span> &amp;&amp; *pattern == <span class="string">'\0'</span>) <span class="comment">// 若匹配字符串先结束，则返回false</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">// 下一个字符为 '*'</span></span><br><span class="line">        <span class="keyword">if</span> (*(pattern + <span class="number">1</span>) == <span class="string">'*'</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (*str == *pattern || (*pattern == <span class="string">'.'</span> &amp;&amp; *str != <span class="string">'\0'</span>))</span><br><span class="line">                <span class="keyword">return</span> (matchCore(str, pattern + <span class="number">2</span>)) || (matchCore(str + <span class="number">1</span>, pattern + <span class="number">2</span>)) || (matchCore(str + <span class="number">1</span>, pattern));</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> matchCore(str, pattern + <span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 当前字符相等，或匹配字符为 '.'</span></span><br><span class="line">        <span class="keyword">if</span> (*str == *pattern || (*pattern == <span class="string">'.'</span> &amp;&amp; *str != <span class="string">'\0'</span>))</span><br><span class="line">            <span class="keyword">return</span> matchCore(str + <span class="number">1</span>, pattern + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-04T09:10:30+08:00"
-              content="2020-06-04">
-          06-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/8cb20708.html" itemprop="url">
-            <span itemprop="name">正则表达式匹配</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-03T20:35:36+08:00"
-              content="2020-06-03">
-          06-03
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/f6c89aa9.html" itemprop="url">
-            <span itemprop="name">构建乘积数组</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-03T18:25:21+08:00"
-              content="2020-06-03">
-          06-03
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/8f265477.html" itemprop="url">
-            <span itemprop="name">数组中重复的数字</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-03T15:47:22+08:00"
-              content="2020-06-03">
-          06-03
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/5b88b5e3.html" itemprop="url">
-            <span itemprop="name">把字符串转换为整数</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-03T09:14:29+08:00"
-              content="2020-06-03">
-          06-03
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/801cb1c0.html" itemprop="url">
-            <span itemprop="name">不适用四则运算符计算两个数的和</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-02T21:17:52+08:00"
-              content="2020-06-02">
-          06-02
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/e799159.html" itemprop="url">
-            <span itemprop="name">求1+2+3+...+n</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-02T17:02:19+08:00"
-              content="2020-06-02">
-          06-02
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/1751c933.html" itemprop="url">
-            <span itemprop="name">孩子们的游戏（圆圈中最后剩下的数）</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-01T17:25:27+08:00"
-              content="2020-06-01">
-          06-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/c2f2d418.html" itemprop="url">
-            <span itemprop="name">扑克牌顺子</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-01T11:05:03+08:00"
-              content="2020-06-01">
-          06-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/3ad2c455.html" itemprop="url">
-            <span itemprop="name">翻转单词顺序</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-06-01T09:48:06+08:00"
-              content="2020-06-01">
-          06-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/eb78a2fc.html" itemprop="url">
-            <span itemprop="name">左旋转字符串</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+<p>参考博文链接：<a href="https://cuijiahua.com/blog/2018/01/basis_52.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2018/01/basis_52.html</a></p>
 
     </div>
-  </div>
-  
-  
-  
+    
+    
+    
+    
+    
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"><i class="fa fa-tag"></i> 字符串</a>
+          </div>
+    
+        
 
+    
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/f6c89aa9.html" rel="prev" title="构建乘积数组">
+      <i class="fa fa-chevron-left"></i> 构建乘积数组
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
   
+  
+  
+<div>
+	
+		  
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+   <!-- JS库 sweetalert 引用本地路径 -->
+  <script src="/js/sweetalert.min.js"></script>
+  <p><span>文章作者:</span><a href="/" title="访问 zerofly 的个人博客">zerofly</a></p>
+  <p><span>发布时间:</span>2020年06月04日 - 09:06</p>
+  <p><span>原始链接:</span><a href="/8cb20708.html" title="正则表达式匹配">http://yoursite.com/8cb20708.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/8cb20708.html"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+	
+</div>
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -458,6 +415,7 @@
     
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
       </div>
       <!--/noindex-->
     
