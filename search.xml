@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>将升序链表转换为平衡二叉树</title>
+      <link href="/6d3bd5b5.html"/>
+      <url>/6d3bd5b5.html</url>
+      
+        <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个单链表，其中的元素按升序排序，请将它转化成平衡二叉搜索树（BST)。</p><h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>二叉搜索树的结点间是有大小排序的。即，左树任何一个结点都小于根结点，右树的任何一个结点都大于根结点。</p><p>平衡二叉树，是指左右树的深度之差<strong>小于等于1</strong>的二叉树。</p><p>其实这道题的解题思路和将升序数组转化为平衡二叉搜索树的题解题思路一样。只是，由于是不同的数据类型，在求取中点的方式不同。那么<strong>如何找到链表的中点</strong>就是这道题要解决的一个难题。</p><p>对于单链表的中点问题，可以使用快慢指针的方式：即快指针的速度永远是慢指针的两倍，当快指针到达终点时，慢指针指向的就是单链表的中点。</p><p>找到链表中点后，中点左侧就是平衡二叉搜索树的左树结点，右侧为右树结点。然后依次递归即可构造出所需的平衡二叉搜索树。</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 二叉树结果和链表结构如源代码所示</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">TreeNode* <span class="title">sortedListToBST</span><span class="params">(ListNode* &amp;head)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> BST(head, <span class="literal">NULL</span>);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function">TreeNode* <span class="title">BST</span><span class="params">(ListNode* head, ListNode* tail)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == tail) <span class="comment">// 链表为空</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        ListNode* fast = head;</span><br><span class="line">        ListNode* slow = head;</span><br><span class="line">        <span class="keyword">while</span> (fast != tail &amp;&amp; fast-&gt;next != tail)</span><br><span class="line">        &#123;</span><br><span class="line">            fast = fast-&gt;next-&gt;next;</span><br><span class="line">            slow = slow-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode* root = <span class="keyword">new</span> TreeNode(slow-&gt;val);</span><br><span class="line">        root-&gt;left = BST(head, slow);</span><br><span class="line">        root-&gt;right = BST(slow-&gt;next, tail);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 链表 </tag>
+            
+            <tag> 平衡二叉树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>剪绳子</title>
       <link href="/1e19723b.html"/>
       <url>/1e19723b.html</url>
@@ -161,9 +188,9 @@
             
             <tag> 二叉树 </tag>
             
-            <tag> 栈 </tag>
-            
             <tag> 中序遍历 </tag>
+            
+            <tag> 栈 </tag>
             
         </tags>
       
@@ -1488,9 +1515,9 @@
       
         <tags>
             
-            <tag> 队列 </tag>
-            
             <tag> 栈 </tag>
+            
+            <tag> 队列 </tag>
             
         </tags>
       
