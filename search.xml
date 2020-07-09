@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>找出所有根结点到叶子节点之和为sum的路径</title>
+      <link href="/66b2b5fd.html"/>
+      <url>/66b2b5fd.html</url>
+      
+        <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个二叉树和一个值sum，请找出所有根结点到叶子结点值之和等于sum的路径。</p><h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>这个和判断是否又满足根结点到叶子结点之和为sum的相似，只是需要输出满足条件的路径，而且还需找出所有路径。</p><p>首先，构造一个子函数实现遍历二叉树，找出满足条件的所有路径。</p><ul><li>构造vector&lt;vector&lt;&gt;&gt;容器result来存放路径；构造vector容器res来存放当前遍历的结点值；</li><li>判断当前是否满足根结点到叶子节点的路径，且结点值之和为sum（sum的值会随着递归的调用而减小，每次减小的部分就是当前结点的值）；<ul><li>若满足条件，则将此路径存放到result中，否则继续下一步；</li></ul></li><li>然后调用递归，以当前结点的左结点为根结点，寻找符合条件的路径；</li><li>当左树部分寻找完后，调用递归，以当前根结点的右结点为根，寻找符合条件的路径；</li></ul><p>如果没有解释清楚，请看代码吧！:joy:</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//树的结构定义参见源代码</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; <span class="title">pathSum</span><span class="params">(TreeNode* root, <span class="keyword">int</span> sum)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!root)</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; res;</span><br><span class="line">        path(root, sum, res);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; result;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">path</span><span class="params">(TreeNode* root, <span class="keyword">int</span> sum, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; res)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!root)</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        res.push_back(root-&gt;val);</span><br><span class="line">        <span class="keyword">if</span> (root-&gt;left == <span class="literal">NULL</span> &amp;&amp; root-&gt;right == <span class="literal">NULL</span> &amp;&amp; root-&gt;val == sum)</span><br><span class="line">            result.push_back(res);</span><br><span class="line">        </span><br><span class="line">        path(root-&gt;left, sum - root-&gt;val, res);</span><br><span class="line">        path(root-&gt;right, sum - root-&gt;val, res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>注意，每调用依次<code>path</code>函数，<code>res</code>容器就会重新构造一次，以满足每条路径都在各自的容器内。</p><p>参考链接：<a href="https://www.nowcoder.com/questionTerminal/840dd2dc4fbd4b2199cd48f2dadf930a?f=discussion" target="_blank" rel="noopener">https://www.nowcoder.com/questionTerminal/840dd2dc4fbd4b2199cd48f2dadf930a?f=discussion</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二叉树 </tag>
+            
+            <tag> 路径 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>将升序链表转换为平衡二叉树</title>
       <link href="/6d3bd5b5.html"/>
       <url>/6d3bd5b5.html</url>
