@@ -21,16 +21,16 @@
     var CONFIG = {"hostname":"zeroflycui.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#7400a1","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="题目描述给定两个字符串S和T，返回S子序列等于T的不同子序列个数有多少个？ 字符串的子序列是由原来的字符串删除一些字符（也可以不删除）在不改变相对位置的情况下的剩余字符（例如，”ACE”is a subsequence of”ABCDE”但是”AEC”不是）例如： S &#x3D;”rabbbit”, T &#x3D;”rabbit”返回3 解题思路一般给出的字符串S的长度是大于或者等于字符串T的长度。 构造一个二">
+  <meta name="description" content="返回S子字符串等于T的不同子序列个数题目描述给定两个字符串S和T，返回S子序列等于T的不同子序列个数有多少个？ 字符串的子序列是由原来的字符串删除一些字符（也可以不删除）在不改变相对位置的情况下的剩余字符（例如，”ACE”is a subsequence of”ABCDE”但是”AEC”不是）例如： S &#x3D;”rabbbit”, T &#x3D;”rabbit”返回3 解题思路一般给出的字符串S的长度是大于或">
 <meta property="og:type" content="article">
 <meta property="og:title" content="返回S子字符串等于T的不同子序列个数">
 <meta property="og:url" content="http://zeroflycui.github.io/5281c00.html">
 <meta property="og:site_name" content="zerofly&#39;s Blog">
-<meta property="og:description" content="题目描述给定两个字符串S和T，返回S子序列等于T的不同子序列个数有多少个？ 字符串的子序列是由原来的字符串删除一些字符（也可以不删除）在不改变相对位置的情况下的剩余字符（例如，”ACE”is a subsequence of”ABCDE”但是”AEC”不是）例如： S &#x3D;”rabbbit”, T &#x3D;”rabbit”返回3 解题思路一般给出的字符串S的长度是大于或者等于字符串T的长度。 构造一个二">
+<meta property="og:description" content="返回S子字符串等于T的不同子序列个数题目描述给定两个字符串S和T，返回S子序列等于T的不同子序列个数有多少个？ 字符串的子序列是由原来的字符串删除一些字符（也可以不删除）在不改变相对位置的情况下的剩余字符（例如，”ACE”is a subsequence of”ABCDE”但是”AEC”不是）例如： S &#x3D;”rabbbit”, T &#x3D;”rabbit”返回3 解题思路一般给出的字符串S的长度是大于或">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20180403/659633_1522741596706_4A47A0DB6E60853DEDFCFDF08A5CA249">
 <meta property="article:published_time" content="2020-07-10T03:19:46.000Z">
-<meta property="article:modified_time" content="2020-07-10T09:16:18.300Z">
+<meta property="article:modified_time" content="2020-07-10T09:55:45.964Z">
 <meta property="article:author" content="zerofly">
 <meta property="article:tag" content="字符串">
 <meta property="article:tag" content="动态规划">
@@ -221,7 +221,7 @@
               <span class="post-meta-item-text">发表于</span>
               
     
-              <time title="创建时间：2020-07-10 11:19:46 / 修改时间：17:16:18" itemprop="dateCreated datePublished" datetime="2020-07-10T11:19:46+08:00">2020-07-10</time>
+              <time title="创建时间：2020-07-10 11:19:46 / 修改时间：17:55:45" itemprop="dateCreated datePublished" datetime="2020-07-10T11:19:46+08:00">2020-07-10</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -262,14 +262,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.6k</span>
+              <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
     
         </div>
@@ -281,8 +281,7 @@
     <div class="post-body" itemprop="articleBody">
     
       
-        <hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个字符串S和T，返回S子序列等于T的不同子序列个数有多少个？</p>
+        <h2 id="返回S子字符串等于T的不同子序列个数"><a href="#返回S子字符串等于T的不同子序列个数" class="headerlink" title="返回S子字符串等于T的不同子序列个数"></a>返回S子字符串等于T的不同子序列个数</h2><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个字符串S和T，返回S子序列等于T的不同子序列个数有多少个？</p>
 <p>字符串的子序列是由原来的字符串删除一些字符（也可以不删除）在不改变相对位置的情况下的剩余字符（例如，”ACE”is a subsequence of”ABCDE”但是”AEC”不是）<br>例如：</p>
 <p>S =”rabbbit”, T =”rabbit”<br>返回3</p>
 <h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>一般给出的字符串S的长度是大于或者等于字符串T的长度。</p>
@@ -418,7 +417,7 @@
     
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#返回S子字符串等于T的不同子序列个数"><span class="nav-number">1.</span> <span class="nav-text">返回S子字符串等于T的不同子序列个数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number"></span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number"></span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number"></span> <span class="nav-text">代码</span></a></div>
       </div>
       <!--/noindex-->
     
