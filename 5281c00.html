@@ -21,22 +21,23 @@
     var CONFIG = {"hostname":"zeroflycui.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#7400a1","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="求二叉树的深度。">
+  <meta name="description" content="题目描述给定两个字符串S和T，返回S子序列等于T的不同子序列个数有多少个？ 字符串的子序列是由原来的字符串删除一些字符（也可以不删除）在不改变相对位置的情况下的剩余字符（例如，”ACE”is a subsequence of”ABCDE”但是”AEC”不是）例如： S &#x3D;”rabbbit”, T &#x3D;”rabbit”返回3 解题思路一般给出的字符串S的长度是大于或者等于字符串T的长度。 构造一个二">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树的深度">
-<meta property="og:url" content="http://zeroflycui.github.io/fc8ea05.html">
+<meta property="og:title" content="返回S子字符串等于T的不同子序列个数">
+<meta property="og:url" content="http://zeroflycui.github.io/5281c00.html">
 <meta property="og:site_name" content="zerofly&#39;s Blog">
-<meta property="og:description" content="求二叉树的深度。">
+<meta property="og:description" content="题目描述给定两个字符串S和T，返回S子序列等于T的不同子序列个数有多少个？ 字符串的子序列是由原来的字符串删除一些字符（也可以不删除）在不改变相对位置的情况下的剩余字符（例如，”ACE”is a subsequence of”ABCDE”但是”AEC”不是）例如： S &#x3D;”rabbbit”, T &#x3D;”rabbit”返回3 解题思路一般给出的字符串S的长度是大于或者等于字符串T的长度。 构造一个二">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-30T08:40:08.000Z">
-<meta property="article:modified_time" content="2020-05-30T09:07:19.142Z">
+<meta property="og:image" content="https://uploadfiles.nowcoder.com/images/20180403/659633_1522741596706_4A47A0DB6E60853DEDFCFDF08A5CA249">
+<meta property="article:published_time" content="2020-07-10T03:19:46.000Z">
+<meta property="article:modified_time" content="2020-07-10T09:16:18.300Z">
 <meta property="article:author" content="zerofly">
-<meta property="article:tag" content="二叉树">
-<meta property="article:tag" content="深度优先遍历">
-<meta property="article:tag" content="广度优先遍历">
+<meta property="article:tag" content="字符串">
+<meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://uploadfiles.nowcoder.com/images/20180403/659633_1522741596706_4A47A0DB6E60853DEDFCFDF08A5CA249">
 
-<link rel="canonical" href="http://zeroflycui.github.io/fc8ea05.html">
+<link rel="canonical" href="http://zeroflycui.github.io/5281c00.html">
 
 
 <script id="page-configurations">
@@ -49,7 +50,7 @@
   };
 </script>
 
-  <title>二叉树的深度 | zerofly's Blog</title>
+  <title>返回S子字符串等于T的不同子序列个数 | zerofly's Blog</title>
   
 
 
@@ -195,7 +196,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://zeroflycui.github.io/fc8ea05.html">
+    <link itemprop="mainEntityOfPage" href="http://zeroflycui.github.io/5281c00.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -208,7 +209,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          二叉树的深度
+          返回S子字符串等于T的不同子序列个数
         </h1>
     
         <div class="post-meta">
@@ -220,7 +221,7 @@
               <span class="post-meta-item-text">发表于</span>
               
     
-              <time title="创建时间：2020-05-30 16:40:08 / 修改时间：17:07:19" itemprop="dateCreated datePublished" datetime="2020-05-30T16:40:08+08:00">2020-05-30</time>
+              <time title="创建时间：2020-07-10 11:19:46 / 修改时间：17:16:18" itemprop="dateCreated datePublished" datetime="2020-07-10T11:19:46+08:00">2020-07-10</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -228,7 +229,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%91%E6%8C%87Offer/" itemprop="url" rel="index"><span itemprop="name">剑指Offer</span></a>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
                 </span>
             </span>
     
@@ -250,8 +251,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/fc8ea05.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/fc8ea05.html" itemprop="commentCount"></span>
+    <a title="valine" href="/5281c00.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/5281c00.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -261,7 +262,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -270,7 +271,6 @@
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               <span>1 分钟</span>
             </span>
-            <div class="post-description">求二叉树的深度。</div>
     
         </div>
       </header>
@@ -282,17 +282,27 @@
     
       
         <hr>
-<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>输入一颗二叉树，求该树的深度。</p>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>求二叉树深度，通常有两种做法。</p>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个字符串S和T，返回S子序列等于T的不同子序列个数有多少个？</p>
+<p>字符串的子序列是由原来的字符串删除一些字符（也可以不删除）在不改变相对位置的情况下的剩余字符（例如，”ACE”is a subsequence of”ABCDE”但是”AEC”不是）<br>例如：</p>
+<p>S =”rabbbit”, T =”rabbit”<br>返回3</p>
+<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>一般给出的字符串S的长度是大于或者等于字符串T的长度。</p>
+<p>构造一个二维矩阵，行数为字符串<code>T</code>的长度<code>+1</code>，列数为字符串<code>S</code>的长度<code>+1</code>。<strong>加一的目的是考虑了两个字符串为零的情况。</strong></p>
+<p>当<code>S</code>字符串为<code>0</code>时，任何字符串<code>T</code><strong>都含有一个</strong>满足条件的子序列。当<code>T</code>字符串为<code>0</code>时，对于任何长度不为<code>0</code>的字符串<code>S</code>来说，<strong>都没有</strong>满足条件的子序列。<strong>同时说明了<code>T</code>时<code>S</code>的子字符串。</strong></p>
+<p>对于非零的两个字符串进行如下比较。以题中给的例子解释以下。</p>
+<p><img src="https://uploadfiles.nowcoder.com/images/20180403/659633_1522741596706_4A47A0DB6E60853DEDFCFDF08A5CA249" alt="img"></p>
+<p>首先初始化，第一行为<code>1</code>（<code>T</code>长度为<code>0</code>)；初始化第一列为<code>0</code>(<code>S</code>长度为<code>0</code>,<code>T</code>不为0时)。</p>
+<p>保持子字符的第一个子字符串长度不变，依次递增<code>S</code>字符串字符。（即每行遍历数组）</p>
 <ul>
-<li>一种是通过深度优先遍历得到二叉树的深度；</li>
-<li>另一种是通过广度优先遍历（层次遍历）得到二叉树的深度；</li>
+<li>若两个比较的字符不相同，则<code>array[][] = array[i][j-1]</code>;(等于前面的数值)</li>
+<li>若两个比较字符相同，则<code>array[][] =array[i][j-1]+array[i-1][j-1]</code>（等于<code>前面的数值</code> 加<code>S子序列等于当前T&#39;的子序列的个数</code>）</li>
 </ul>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 深度优先遍历</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>* <span class="title">left</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>* <span class="title">right</span>;</span></span><br><span class="line">    TreeNode (<span class="keyword">int</span> x): val(x), left(<span class="literal">NULL</span>), right(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">TreeDepth</span><span class="params">(TreeNode* pRoot)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pRoot == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> left = TreeDepth(pRoot-&gt;left);</span><br><span class="line">        <span class="keyword">int</span> right = TreeDepth(pRoot-&gt;right);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> (left &gt; right) ? (left + <span class="number">1</span>) : (right + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>当<code>S</code>中字符增加到最后一个字符时，则将<code>T</code>字符递增一个，然后继续递增<code>S</code>中的字符；继续如上循环直到结束。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numDistinct</span><span class="params">(<span class="built_in">string</span> S, <span class="built_in">string</span> T)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = T.length();</span><br><span class="line">        <span class="keyword">int</span> n = S.length();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 构造矩阵(m+1)×(n+1)</span></span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; <span class="title">array</span><span class="params">(m + <span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(n + <span class="number">1</span>, <span class="number">0</span>))</span></span>;</span><br><span class="line">        <span class="comment">//初始化第一行</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n+<span class="number">1</span>; i++)</span><br><span class="line">            <span class="built_in">array</span>[<span class="number">0</span>][i] = <span class="number">1</span>;</span><br><span class="line">        <span class="comment">//初始化第一列</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m + <span class="number">1</span>; i++)</span><br><span class="line">            <span class="built_in">array</span>[i][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历每一行</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m + <span class="number">1</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n + <span class="number">1</span>; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (T[i - <span class="number">1</span>] != S[j - <span class="number">1</span>])</span><br><span class="line">                    <span class="built_in">array</span>[i][j] = <span class="built_in">array</span>[i][j - <span class="number">1</span>];</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    <span class="built_in">array</span>[i][j] = <span class="built_in">array</span>[i][j - <span class="number">1</span>] + <span class="built_in">array</span>[i - <span class="number">1</span>][j - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">array</span>[m][n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>* <span class="title">left</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>* <span class="title">right</span>;</span></span><br><span class="line">    TreeNode (<span class="keyword">int</span> x): val(x), left(<span class="literal">NULL</span>), right(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">TreeDepth</span><span class="params">(TreeNode* pRoot)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pRoot == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">queue</span>&lt;TreeNode*&gt; Q;</span><br><span class="line">        </span><br><span class="line">        Q.push(pRoot);</span><br><span class="line">        <span class="keyword">int</span> depth = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (!Q.empty())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> <span class="built_in">size</span> = Q.<span class="built_in">size</span>();</span><br><span class="line">            depth++;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">size</span>; i++) <span class="comment">// 把每层的结点依次删除，然后存入下一层所有结点</span></span><br><span class="line">            &#123;</span><br><span class="line">                TreeNode* temp = Q.front();</span><br><span class="line">                Q.pop();</span><br><span class="line">                <span class="keyword">if</span> (temp-&gt;left)</span><br><span class="line">                    Q.push(temp-&gt;left);</span><br><span class="line">                <span class="keyword">if</span> (temp-&gt;right)</span><br><span class="line">                    Q.push(temp-&gt;right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> depth;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>但是上述代码的过程占用了很多无效空间。只通过一个一维数组就能够完成上述操作。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numDistinct</span><span class="params">(<span class="built_in">string</span> S, <span class="built_in">string</span> T)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = S.length();</span><br><span class="line">        <span class="keyword">int</span> n = T.length();</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">array</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">        <span class="built_in">array</span>[<span class="number">0</span>] = <span class="number">1</span>; <span class="comment">// T为空时，满足条件的子序列为1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m + <span class="number">1</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 此处更改数组的数值时从后向前改，因为当前值与上次的结果密切相关</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="built_in">min</span>(i , n); j &gt; <span class="number">0</span>; j--) </span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (S[i - <span class="number">1</span>] == T[j - <span class="number">1</span>])</span><br><span class="line">                    <span class="built_in">array</span>[j] = <span class="built_in">array</span>[j] + <span class="built_in">array</span>[j - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">array</span>[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p>参考博文链接：<a href="https://cuijiahua.com/blog/2018/01/basis_38.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2018/01/basis_38.html</a></p>
+<p>参考链接：<a href="https://www.nowcoder.com/questionTerminal/ed2923e49d3d495f8321aa46ade9f873?f=discussion" target="_blank" rel="noopener">https://www.nowcoder.com/questionTerminal/ed2923e49d3d495f8321aa46ade9f873?f=discussion</a></p>
 
     </div>
     
@@ -303,9 +313,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag"><i class="fa fa-tag"></i> 二叉树</a>
-              <a href="/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86/" rel="tag"><i class="fa fa-tag"></i> 深度优先遍历</a>
-              <a href="/tags/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86/" rel="tag"><i class="fa fa-tag"></i> 广度优先遍历</a>
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"><i class="fa fa-tag"></i> 字符串</a>
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag"><i class="fa fa-tag"></i> 动态规划</a>
           </div>
     
         
@@ -314,13 +323,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/633aec21.html" rel="prev" title="数字在排序数组中出现的次数">
-      <i class="fa fa-chevron-left"></i> 数字在排序数组中出现的次数
+    <a href="/97828958.html" rel="prev" title="剑指Offer参考目录">
+      <i class="fa fa-chevron-left"></i> 剑指Offer参考目录
     </a></div>
-      <div class="post-nav-item">
-    <a href="/4263f441.html" rel="next" title="平衡二叉树">
-      平衡二叉树 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -338,9 +344,9 @@
    <!-- JS库 sweetalert 引用本地路径 -->
   <script src="/js/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 zerofly 的个人博客">zerofly</a></p>
-  <p><span>发布时间:</span>2020年05月30日 - 16:05</p>
-  <p><span>原始链接:</span><a href="/fc8ea05.html" title="二叉树的深度">http://zeroflycui.github.io/fc8ea05.html</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://zeroflycui.github.io/fc8ea05.html"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2020年07月10日 - 11:07</p>
+  <p><span>原始链接:</span><a href="/5281c00.html" title="返回S子字符串等于T的不同子序列个数">http://zeroflycui.github.io/5281c00.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://zeroflycui.github.io/5281c00.html"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span> 转载请保留原文链接及作者。</p>  
 </div>
