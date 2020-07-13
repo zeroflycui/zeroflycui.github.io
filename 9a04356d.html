@@ -21,20 +21,22 @@
     var CONFIG = {"hostname":"zeroflycui.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#7400a1","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="调整数组元素，使其奇数在前偶数在后，并且奇和奇，偶和偶之间的相对位置不变。">
+  <meta name="description" content="找出左上角到右下角数值之和最小路径。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="调整数组奇数在前偶数在后（C++）">
-<meta property="og:url" content="http://zeroflycui.github.io/558b5743.html">
+<meta property="og:title" content="左上角到右下角最小路径">
+<meta property="og:url" content="http://zeroflycui.github.io/9a04356d.html">
 <meta property="og:site_name" content="zerofly&#39;s Blog">
-<meta property="og:description" content="调整数组元素，使其奇数在前偶数在后，并且奇和奇，偶和偶之间的相对位置不变。">
+<meta property="og:description" content="找出左上角到右下角数值之和最小路径。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-20T09:43:02.000Z">
-<meta property="article:modified_time" content="2020-05-20T10:49:27.493Z">
+<meta property="og:image" content="http://zeroflycui.github.io/9a04356d/image-20200713211406071.png">
+<meta property="article:published_time" content="2020-07-13T11:31:01.000Z">
+<meta property="article:modified_time" content="2020-07-13T13:14:57.946Z">
 <meta property="article:author" content="zerofly">
-<meta property="article:tag" content="数组">
+<meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://zeroflycui.github.io/9a04356d/image-20200713211406071.png">
 
-<link rel="canonical" href="http://zeroflycui.github.io/558b5743.html">
+<link rel="canonical" href="http://zeroflycui.github.io/9a04356d.html">
 
 
 <script id="page-configurations">
@@ -47,7 +49,7 @@
   };
 </script>
 
-  <title>调整数组奇数在前偶数在后（C++） | zerofly's Blog</title>
+  <title>左上角到右下角最小路径 | zerofly's Blog</title>
   
 
 
@@ -193,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://zeroflycui.github.io/558b5743.html">
+    <link itemprop="mainEntityOfPage" href="http://zeroflycui.github.io/9a04356d.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -206,7 +208,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          调整数组奇数在前偶数在后（C++）
+          左上角到右下角最小路径
         </h1>
     
         <div class="post-meta">
@@ -218,7 +220,7 @@
               <span class="post-meta-item-text">发表于</span>
               
     
-              <time title="创建时间：2020-05-20 17:43:02 / 修改时间：18:49:27" itemprop="dateCreated datePublished" datetime="2020-05-20T17:43:02+08:00">2020-05-20</time>
+              <time title="创建时间：2020-07-13 19:31:01 / 修改时间：21:14:57" itemprop="dateCreated datePublished" datetime="2020-07-13T19:31:01+08:00">2020-07-13</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -226,7 +228,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%91%E6%8C%87Offer/" itemprop="url" rel="index"><span itemprop="name">剑指Offer</span></a>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
                 </span>
             </span>
     
@@ -248,8 +250,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/558b5743.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/558b5743.html" itemprop="commentCount"></span>
+    <a title="valine" href="/9a04356d.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/9a04356d.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -259,7 +261,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>605</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -268,7 +270,7 @@
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               <span>1 分钟</span>
             </span>
-            <div class="post-description">调整数组元素，使其奇数在前偶数在后，并且奇和奇，偶和偶之间的相对位置不变。</div>
+            <div class="post-description">找出左上角到右下角数值之和最小路径。</div>
     
         </div>
       </header>
@@ -279,13 +281,19 @@
     <div class="post-body" itemprop="articleBody">
     
       
-        <h1 id="刷题平台"><a href="#刷题平台" class="headerlink" title="刷题平台"></a>刷题平台</h1><p><a href="https://www.nowcoder.com" target="_blank" rel="noopener">牛客网</a></p>
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>输入一个整数数组，实现一个函数来调整改数组中数字的顺序，使得所有的奇数位于数组的前半部分，所有的偶数位于数组的后半部分，并<strong>保证奇数和奇数，偶数和偶数之间的相对位置不变</strong>。</p>
-<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>根据题意可知将数组分为两个部分，可以考虑两端都可插入的<strong>双向数组deque容器</strong>。</p>
-<p>然后通过使用vector容器的赋值操作<code>assign</code>把deque容器的值赋值给vector容器array。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">reOrderArray</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;<span class="built_in">array</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">deque</span>&lt;<span class="keyword">int</span>&gt; result;</span><br><span class="line">        <span class="keyword">int</span> <span class="built_in">size</span> = <span class="built_in">array</span>.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">size</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">array</span>[i] % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">                result.push_back(<span class="built_in">array</span>[i]);</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">array</span>[<span class="built_in">size</span><span class="number">-1</span>-i] % <span class="number">2</span> == <span class="number">1</span>) <span class="comment">// 向前插入奇数时，为了保证奇与奇的相对位置，需倒序遍历</span></span><br><span class="line">                result.push_front(<span class="built_in">array</span>[<span class="built_in">size</span><span class="number">-1</span>-i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">array</span>.assign(result.<span class="built_in">begin</span>(), result.<span class="built_in">end</span>());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <hr>
+<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定一个由非负整数填充的m x n的二维数组，现在要从二维数组的左上角走到右下角，请找出路径上的所有数字之和最小的路径。<br>注意：你每次只能向下或向右移动。</p>
+<h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>与之前找路径条数的问题不同，这次要求找出”最短“路径。这就需要找到每次的最短路径了（这不废话吗&gt;_&gt;）之前求路径条数时，需要知道 每个临时终点 左和上浅蓝色位置的条数，然后做和。同样求最短路径也是从这两个浅蓝色位置入手（<strong>因为每次只能向下或向右运动，红色位置接受的数据只能由左或上</strong>）</p>
+<p>比较两个浅蓝色位置的路径，选取最小值再加上当前位置数值即为最短路径，即为所求。</p>
+<p><img src="/9a04356d/image-20200713211406071.png" alt></p>
+<p>下面请康康代码，再理解一下吧！</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minPathSum</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; &amp;grid)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rows = grid.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">int</span> cols = grid[<span class="number">0</span>].<span class="built_in">size</span>();</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; <span class="title">dp</span><span class="params">(rows, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(cols, <span class="number">0</span>))</span></span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rows; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cols; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (i * j != <span class="number">0</span>) <span class="comment">// 第一行和第一列特殊</span></span><br><span class="line">                &#123;</span><br><span class="line">                	dp[i][j] = <span class="built_in">min</span>(dp[i<span class="number">-1</span>][j],dp[i][j<span class="number">-1</span>]) + grid[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (i  == <span class="number">0</span>) <span class="comment">// 第一行</span></span><br><span class="line">                    dp[i][j] = dp[i][j - <span class="number">1</span>] + grid[i][j];</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (j == <span class="number">0</span>) <span class="comment">// 第一列</span></span><br><span class="line">                    dp[i][j] = dp[i - <span class="number">1</span>][j] + grid[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[rows<span class="number">-1</span>][cols<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p>vector容器中的<code>assign(beg, end)</code>即将[beg, end]区间的值赋值给本身。</p>
+<p>一维数组</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minPathSum</span> <span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; &amp;grid)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rows = grid.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">int</span> cols = grid[<span class="number">0</span>].<span class="built_in">size</span>();</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">dp</span><span class="params">(cols, <span class="number">0</span>)</span></span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rows; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cols; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (i * j != <span class="number">0</span>)</span><br><span class="line">                    dp[j] = <span class="built_in">min</span>(dp[j], dp[j - <span class="number">1</span>]) + grid[i][j];</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">0</span>)</span><br><span class="line">                    dp[j] = dp[j - <span class="number">1</span>] + grid[i][j];</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (j == <span class="number">0</span>)</span><br><span class="line">                    dp[j] = dp[j] + grid[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[cols - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>参考链接：</p>
+<p><a href="https://www.nowcoder.com/questionTerminal/23462ed010024fcabb7dbd3df57c715e?f=discussion" target="_blank" rel="noopener">https://www.nowcoder.com/questionTerminal/23462ed010024fcabb7dbd3df57c715e?f=discussion</a></p>
 
     </div>
     
@@ -296,7 +304,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"><i class="fa fa-tag"></i> 数组</a>
+              <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag"><i class="fa fa-tag"></i> 动态规划</a>
           </div>
     
         
@@ -305,13 +313,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/5ba1c33c.html" rel="prev" title="数值得整数次方（C++版）">
-      <i class="fa fa-chevron-left"></i> 数值得整数次方（C++版）
+    <a href="/6d399b0a.html" rel="prev" title="左上角到右下角路径（有障碍）">
+      <i class="fa fa-chevron-left"></i> 左上角到右下角路径（有障碍）
     </a></div>
-      <div class="post-nav-item">
-    <a href="/1c380935.html" rel="next" title="输出链表的倒数第k个结点（C++）">
-      输出链表的倒数第k个结点（C++） <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -329,9 +334,9 @@
    <!-- JS库 sweetalert 引用本地路径 -->
   <script src="/js/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 zerofly 的个人博客">zerofly</a></p>
-  <p><span>发布时间:</span>2020年05月20日 - 17:05</p>
-  <p><span>原始链接:</span><a href="/558b5743.html" title="调整数组奇数在前偶数在后（C++）">http://zeroflycui.github.io/558b5743.html</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://zeroflycui.github.io/558b5743.html"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2020年07月13日 - 19:07</p>
+  <p><span>原始链接:</span><a href="/9a04356d.html" title="左上角到右下角最小路径">http://zeroflycui.github.io/9a04356d.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://zeroflycui.github.io/9a04356d.html"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span> 转载请保留原文链接及作者。</p>  
 </div>
@@ -403,7 +408,7 @@
     
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#刷题平台"><span class="nav-number">1.</span> <span class="nav-text">刷题平台</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">2.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">3.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
       </div>
       <!--/noindex-->
     
