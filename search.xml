@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>word1转换为word2至少需要多少步操作</title>
+      <link href="/f36dfb8.html"/>
+      <url>/f36dfb8.html</url>
+      
+        <content type="html"><![CDATA[<hr><h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给定两个单词word1和word2，请计算将word1转换为word2至少需要多少步操作。<br>你可以对一个单词执行以下3种操作：<br>a）在单词中插入一个字符<br>b）删除单词中的一个字符<br>c）替换单词中的一个字符</p><h1 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h1><p>动态规划问题，简单的思想就是将问题拆分为一个个最小子问题，然后依次解决每个小子问题并从中找到规律。</p><p>经过几道动态规划的练习，大概都是通过矩阵来找规律的，不妨先通过矩阵找一下规律：</p><img src="/f36dfb8/image-20200717081627611.png" alt="矩阵" style="zoom:50%;"><p>其中word1为<code>&quot;abc&quot;</code>，word2为<code>&quot;bcac&quot;</code>.通过分析可知，<strong>第一行和第一列依旧是特殊的</strong>。然后从非第一行和第一列处发现（非绿色区域），发现当前位置两个字符相同时它的值<strong>等于左上方的值</strong>，即</p><p><code>dp[i][j]=dp[i-1][j-1]</code>；当两个字符不相等时，情况就要复杂一点了。</p><p>通过前面动态规划的经验，当前位置的值和它的<strong>左、上、左</strong></p><p><strong>上</strong>会存在一定的关系，而且知道当两个字符不一样时<strong>至少需要进行一种操作</strong>，对当前位置<strong>减一</strong>发现是<strong>左、上、左上</strong>中最小的那个。因此可以得到<code>dp[i][j]=min(min(dp[i][j-1],dp[i-1][j]),dp[i-1][j-1]) + 1;</code></p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minDistance</span><span class="params">(<span class="built_in">string</span> word1, <span class="built_in">string</span> word2)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = word1.length();<span class="comment">// row</span></span><br><span class="line">        <span class="keyword">int</span> n = word2.length();<span class="comment">// col</span></span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; <span class="title">dp</span><span class="params">(m+<span class="number">1</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;(n+<span class="number">1</span>))</span></span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m + <span class="number">1</span>; i++) <span class="comment">// 初始化第一列</span></span><br><span class="line">            dp[i][<span class="number">0</span>] = i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n + <span class="number">1</span>; j++)<span class="comment">//初始化第一行</span></span><br><span class="line">            dp[<span class="number">0</span>][j] = j;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m + <span class="number">1</span>; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n + <span class="number">1</span>; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (word1[i<span class="number">-1</span>] == word2[j<span class="number">-1</span>])</span><br><span class="line">                    dp[i][j] = dp[i<span class="number">-1</span>][j<span class="number">-1</span>];</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    dp[i][j] = <span class="built_in">min</span>(<span class="built_in">min</span>(dp[i][j<span class="number">-1</span>], dp[i<span class="number">-1</span>][j]), dp[i<span class="number">-1</span>][j<span class="number">-1</span>]) + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[m][n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>参考链接：</p><p><a href="https://www.nowcoder.com/questionTerminal/81d7738f954242e5ade5e65ec40e5027?f=discussion" target="_blank" rel="noopener">https://www.nowcoder.com/questionTerminal/81d7738f954242e5ade5e65ec40e5027?f=discussion</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 动态规划 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>爬楼梯</title>
       <link href="/e0c20aa2.html"/>
       <url>/e0c20aa2.html</url>
@@ -122,9 +147,9 @@
       
         <tags>
             
-            <tag> 字符串 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> 字符串 </tag>
             
         </tags>
       
@@ -1226,9 +1251,9 @@
             
             <tag> 递归 </tag>
             
-            <tag> 字符串 </tag>
-            
             <tag> 动态规划 </tag>
+            
+            <tag> 字符串 </tag>
             
         </tags>
       
